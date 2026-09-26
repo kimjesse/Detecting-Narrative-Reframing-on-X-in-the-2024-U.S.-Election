@@ -1,0 +1,1316 @@
+INFO:root:Successfully processed may_july_chunk_1
+INFO:root:Successfully processed may_july_chunk_10
+INFO:root:Successfully processed may_july_chunk_11
+INFO:root:Successfully processed may_july_chunk_12
+INFO:root:Successfully processed may_july_chunk_13
+INFO:root:Successfully processed may_july_chunk_14
+ERROR:root:Error with file may_july_chunk_15
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 27, in run_pipeline
+    processed_df.to_csv(output_file_path, index=False)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 3976, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1025, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 272, in save
+    self._save()
+    ~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 277, in _save
+    self._save_body()
+    ~~~~~~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 315, in _save_body
+    self._save_chunk(start_i, end_i)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 330, in _save_chunk
+    libwriters.write_csv_rows(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<3 lines>...
+        self.writer,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "pandas/_libs/writers.pyx", line 73, in pandas._libs.writers.write_csv_rows
+KeyboardInterrupt
+INFO:root:Successfully processed may_july_chunk_16
+INFO:root:Successfully processed may_july_chunk_1
+INFO:root:Successfully processed may_july_chunk_10
+INFO:root:Successfully processed may_july_chunk_11
+INFO:root:Successfully processed may_july_chunk_12
+INFO:root:Successfully processed may_july_chunk_13
+INFO:root:Successfully processed may_july_chunk_14
+INFO:root:Successfully processed may_july_chunk_15
+INFO:root:Successfully processed may_july_chunk_16
+INFO:root:Successfully processed may_july_chunk_17
+INFO:root:Successfully processed may_july_chunk_18
+INFO:root:Successfully processed may_july_chunk_19
+INFO:root:Successfully processed may_july_chunk_2
+INFO:root:Successfully processed may_july_chunk_20
+INFO:root:Successfully processed may_july_chunk_3
+INFO:root:Successfully processed may_july_chunk_4
+INFO:root:Successfully processed may_july_chunk_5
+INFO:root:Successfully processed may_july_chunk_6
+INFO:root:Successfully processed may_july_chunk_7
+INFO:root:Successfully processed may_july_chunk_8
+INFO:root:Successfully processed may_july_chunk_9
+INFO:root:Successfully processed may_july_chunk_181
+INFO:root:Successfully processed may_july_chunk_182
+INFO:root:Successfully processed may_july_chunk_183
+INFO:root:Successfully processed may_july_chunk_184
+INFO:root:Successfully processed may_july_chunk_185
+INFO:root:Successfully processed may_july_chunk_186
+ERROR:root:Error with file may_july_chunk_187
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 27, in run_pipeline
+    processed_df.to_csv(f"{output_file_path}.csv", index=False)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 3976, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1025, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 272, in save
+    self._save()
+    ~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 277, in _save
+    self._save_body()
+    ~~~~~~~~~~~~~~~^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 315, in _save_body
+    self._save_chunk(start_i, end_i)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 330, in _save_chunk
+    libwriters.write_csv_rows(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<3 lines>...
+        self.writer,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "pandas/_libs/writers.pyx", line 73, in pandas._libs.writers.write_csv_rows
+KeyboardInterrupt
+INFO:root:Successfully processed may_july_chunk_188
+INFO:root:Successfully processed may_july_chunk_1
+INFO:root:Successfully processed may_july_chunk_10
+INFO:root:Successfully processed may_july_chunk_11
+INFO:root:Successfully processed may_july_chunk_12
+INFO:root:Successfully processed may_july_chunk_13
+INFO:root:Successfully processed may_july_chunk_14
+INFO:root:Successfully processed may_july_chunk_15
+INFO:root:Successfully processed may_july_chunk_16
+INFO:root:Successfully processed may_july_chunk_17
+INFO:root:Successfully processed may_july_chunk_18
+INFO:root:Successfully processed may_july_chunk_19
+INFO:root:Successfully processed may_july_chunk_2
+INFO:root:Successfully processed may_july_chunk_20
+INFO:root:Successfully processed may_july_chunk_3
+INFO:root:Successfully processed may_july_chunk_4
+INFO:root:Successfully processed may_july_chunk_5
+INFO:root:Successfully processed may_july_chunk_6
+INFO:root:Successfully processed may_july_chunk_7
+INFO:root:Successfully processed may_july_chunk_8
+INFO:root:Successfully processed may_july_chunk_9
+INFO:root:Successfully processed may_july_chunk_181
+INFO:root:Successfully processed may_july_chunk_182
+INFO:root:Successfully processed may_july_chunk_183
+INFO:root:Successfully processed may_july_chunk_184
+INFO:root:Successfully processed may_july_chunk_185
+INFO:root:Successfully processed may_july_chunk_186
+INFO:root:Successfully processed may_july_chunk_187
+INFO:root:Successfully processed may_july_chunk_188
+INFO:root:Successfully processed may_july_chunk_189
+INFO:root:Successfully processed may_july_chunk_190
+INFO:root:Successfully processed may_july_chunk_191
+INFO:root:Successfully processed may_july_chunk_192
+INFO:root:Successfully processed may_july_chunk_193
+INFO:root:Successfully processed may_july_chunk_194
+INFO:root:Successfully processed may_july_chunk_195
+INFO:root:Successfully processed may_july_chunk_196
+INFO:root:Successfully processed may_july_chunk_197
+INFO:root:Successfully processed may_july_chunk_198
+INFO:root:Successfully processed may_july_chunk_199
+INFO:root:Successfully processed may_july_chunk_200
+INFO:root:Successfully processed may_july_chunk_201
+INFO:root:Successfully processed may_july_chunk_202
+INFO:root:Successfully processed may_july_chunk_203
+INFO:root:Successfully processed may_july_chunk_204
+INFO:root:Successfully processed may_july_chunk_205
+INFO:root:Successfully processed may_july_chunk_206
+INFO:root:Successfully processed may_july_chunk_207
+INFO:root:Successfully processed may_july_chunk_208
+INFO:root:Successfully processed may_july_chunk_209
+INFO:root:Successfully processed may_july_chunk_210
+INFO:root:Successfully processed may_july_chunk_211
+INFO:root:Successfully processed may_july_chunk_212
+INFO:root:Successfully processed may_july_chunk_213
+INFO:root:Successfully processed may_july_chunk_214
+INFO:root:Successfully processed may_july_chunk_215
+INFO:root:Successfully processed may_july_chunk_216
+INFO:root:Successfully processed may_july_chunk_217
+INFO:root:Successfully processed may_july_chunk_218
+INFO:root:Successfully processed may_july_chunk_219
+INFO:root:Successfully processed may_july_chunk_220
+INFO:root:Successfully processed may_july_chunk_221
+INFO:root:Successfully processed may_july_chunk_222
+INFO:root:Successfully processed may_july_chunk_223
+INFO:root:Successfully processed may_july_chunk_224
+INFO:root:Successfully processed may_july_chunk_225
+INFO:root:Successfully processed may_july_chunk_226
+INFO:root:Successfully processed may_july_chunk_227
+INFO:root:Successfully processed may_july_chunk_228
+INFO:root:Successfully processed may_july_chunk_229
+INFO:root:Successfully processed may_july_chunk_230
+INFO:root:Successfully processed may_july_chunk_231
+INFO:root:Successfully processed may_july_chunk_232
+INFO:root:Successfully processed may_july_chunk_233
+INFO:root:Successfully processed may_july_chunk_234
+INFO:root:Successfully processed may_july_chunk_235
+INFO:root:Successfully processed may_july_chunk_236
+INFO:root:Successfully processed may_july_chunk_237
+INFO:root:Successfully processed may_july_chunk_238
+INFO:root:Successfully processed may_july_chunk_239
+INFO:root:Successfully processed may_july_chunk_240
+INFO:root:Successfully processed may_july_chunk_241
+INFO:root:Successfully processed may_july_chunk_242
+INFO:root:Successfully processed may_july_chunk_243
+INFO:root:Successfully processed may_july_chunk_244
+INFO:root:Successfully processed may_july_chunk_245
+INFO:root:Successfully processed may_july_chunk_246
+INFO:root:Successfully processed may_july_chunk_247
+INFO:root:Successfully processed may_july_chunk_248
+INFO:root:Successfully processed may_july_chunk_249
+INFO:root:Successfully processed may_july_chunk_250
+INFO:root:Successfully processed may_july_chunk_251
+INFO:root:Successfully processed may_july_chunk_252
+INFO:root:Successfully processed may_july_chunk_253
+INFO:root:Successfully processed may_july_chunk_254
+INFO:root:Successfully processed may_july_chunk_255
+INFO:root:Successfully processed may_july_chunk_256
+INFO:root:Successfully processed may_july_chunk_257
+INFO:root:Successfully processed may_july_chunk_258
+INFO:root:Successfully processed may_july_chunk_259
+INFO:root:Successfully processed may_july_chunk_260
+INFO:root:Successfully processed may_july_chunk_261
+INFO:root:Successfully processed may_july_chunk_262
+INFO:root:Successfully processed may_july_chunk_263
+INFO:root:Successfully processed may_july_chunk_264
+INFO:root:Successfully processed may_july_chunk_265
+INFO:root:Successfully processed may_july_chunk_266
+INFO:root:Successfully processed may_july_chunk_267
+INFO:root:Successfully processed may_july_chunk_268
+INFO:root:Successfully processed may_july_chunk_269
+INFO:root:Successfully processed may_july_chunk_270
+INFO:root:Successfully processed may_july_chunk_271
+INFO:root:Successfully processed may_july_chunk_272
+INFO:root:Successfully processed may_july_chunk_273
+INFO:root:Successfully processed may_july_chunk_274
+INFO:root:Successfully processed may_july_chunk_275
+INFO:root:Successfully processed may_july_chunk_276
+INFO:root:Successfully processed may_july_chunk_277
+INFO:root:Successfully processed may_july_chunk_278
+INFO:root:Successfully processed may_july_chunk_279
+INFO:root:Successfully processed may_july_chunk_280
+INFO:root:Successfully processed may_july_chunk_281
+INFO:root:Successfully processed may_july_chunk_282
+INFO:root:Successfully processed may_july_chunk_283
+INFO:root:Successfully processed may_july_chunk_284
+INFO:root:Successfully processed may_july_chunk_285
+INFO:root:Successfully processed may_july_chunk_286
+INFO:root:Successfully processed may_july_chunk_287
+INFO:root:Successfully processed may_july_chunk_288
+INFO:root:Successfully processed may_july_chunk_289
+INFO:root:Successfully processed may_july_chunk_290
+INFO:root:Successfully processed may_july_chunk_291
+INFO:root:Successfully processed may_july_chunk_292
+INFO:root:Successfully processed may_july_chunk_293
+INFO:root:Successfully processed may_july_chunk_294
+INFO:root:Successfully processed may_july_chunk_295
+INFO:root:Successfully processed may_july_chunk_296
+INFO:root:Successfully processed may_july_chunk_297
+INFO:root:Successfully processed may_july_chunk_298
+INFO:root:Successfully processed may_july_chunk_299
+INFO:root:Successfully processed may_july_chunk_300
+INFO:root:Successfully processed may_july_chunk_301
+INFO:root:Successfully processed may_july_chunk_302
+INFO:root:Successfully processed may_july_chunk_303
+INFO:root:Successfully processed may_july_chunk_304
+INFO:root:Successfully processed may_july_chunk_305
+INFO:root:Successfully processed may_july_chunk_306
+INFO:root:Successfully processed may_july_chunk_307
+INFO:root:Successfully processed may_july_chunk_308
+INFO:root:Successfully processed may_july_chunk_309
+INFO:root:Successfully processed may_july_chunk_310
+INFO:root:Successfully processed may_july_chunk_311
+INFO:root:Successfully processed may_july_chunk_312
+INFO:root:Successfully processed may_july_chunk_313
+INFO:root:Successfully processed may_july_chunk_314
+INFO:root:Successfully processed may_july_chunk_315
+INFO:root:Successfully processed may_july_chunk_316
+INFO:root:Successfully processed may_july_chunk_317
+INFO:root:Successfully processed may_july_chunk_318
+INFO:root:Successfully processed may_july_chunk_319
+INFO:root:Successfully processed may_july_chunk_320
+INFO:root:Successfully processed may_july_chunk_321
+INFO:root:Successfully processed may_july_chunk_322
+INFO:root:Successfully processed may_july_chunk_323
+INFO:root:Successfully processed may_july_chunk_324
+INFO:root:Successfully processed may_july_chunk_325
+INFO:root:Successfully processed may_july_chunk_326
+INFO:root:Successfully processed may_july_chunk_327
+INFO:root:Successfully processed may_july_chunk_328
+INFO:root:Successfully processed may_july_chunk_329
+INFO:root:Successfully processed may_july_chunk_330
+INFO:root:Successfully processed may_july_chunk_331
+INFO:root:Successfully processed may_july_chunk_332
+INFO:root:Successfully processed may_july_chunk_333
+INFO:root:Successfully processed may_july_chunk_334
+INFO:root:Successfully processed may_july_chunk_335
+INFO:root:Successfully processed may_july_chunk_336
+INFO:root:Successfully processed may_july_chunk_337
+INFO:root:Successfully processed may_july_chunk_338
+INFO:root:Successfully processed may_july_chunk_339
+INFO:root:Successfully processed may_july_chunk_340
+INFO:root:Successfully processed may_july_chunk_341
+INFO:root:Successfully processed may_july_chunk_342
+INFO:root:Successfully processed may_july_chunk_343
+INFO:root:Successfully processed may_july_chunk_344
+INFO:root:Successfully processed may_july_chunk_345
+INFO:root:Successfully processed may_july_chunk_346
+INFO:root:Successfully processed may_july_chunk_347
+INFO:root:Successfully processed may_july_chunk_348
+INFO:root:Successfully processed may_july_chunk_349
+INFO:root:Successfully processed may_july_chunk_350
+INFO:root:Successfully processed may_july_chunk_351
+INFO:root:Successfully processed may_july_chunk_352
+INFO:root:Successfully processed may_july_chunk_353
+INFO:root:Successfully processed may_july_chunk_354
+INFO:root:Successfully processed may_july_chunk_355
+INFO:root:Successfully processed may_july_chunk_356
+INFO:root:Successfully processed may_july_chunk_357
+INFO:root:Successfully processed may_july_chunk_358
+INFO:root:Successfully processed may_july_chunk_359
+INFO:root:Successfully processed may_july_chunk_360
+INFO:root:Successfully processed may_july_chunk_361
+INFO:root:Successfully processed may_july_chunk_362
+INFO:root:Successfully processed may_july_chunk_363
+INFO:root:Successfully processed may_july_chunk_364
+INFO:root:Successfully processed may_july_chunk_365
+INFO:root:Successfully processed may_july_chunk_366
+INFO:root:Successfully processed may_july_chunk_367
+INFO:root:Successfully processed may_july_chunk_368
+INFO:root:Successfully processed may_july_chunk_369
+INFO:root:Successfully processed may_july_chunk_370
+INFO:root:Successfully processed may_july_chunk_371
+INFO:root:Successfully processed may_july_chunk_372
+INFO:root:Successfully processed may_july_chunk_373
+INFO:root:Successfully processed may_july_chunk_374
+INFO:root:Successfully processed may_july_chunk_375
+INFO:root:Successfully processed may_july_chunk_376
+INFO:root:Successfully processed may_july_chunk_377
+INFO:root:Successfully processed may_july_chunk_378
+INFO:root:Successfully processed may_july_chunk_379
+INFO:root:Successfully processed may_july_chunk_380
+INFO:root:Successfully processed may_july_chunk_21
+INFO:root:Successfully processed may_july_chunk_22
+INFO:root:Successfully processed may_july_chunk_23
+INFO:root:Successfully processed may_july_chunk_24
+INFO:root:Successfully processed may_july_chunk_25
+INFO:root:Successfully processed may_july_chunk_26
+INFO:root:Successfully processed may_july_chunk_27
+INFO:root:Successfully processed may_july_chunk_28
+INFO:root:Successfully processed may_july_chunk_29
+INFO:root:Successfully processed may_july_chunk_30
+INFO:root:Successfully processed may_july_chunk_31
+INFO:root:Successfully processed may_july_chunk_32
+INFO:root:Successfully processed may_july_chunk_33
+INFO:root:Successfully processed may_july_chunk_34
+INFO:root:Successfully processed may_july_chunk_35
+INFO:root:Successfully processed may_july_chunk_36
+INFO:root:Successfully processed may_july_chunk_37
+INFO:root:Successfully processed may_july_chunk_38
+INFO:root:Successfully processed may_july_chunk_39
+INFO:root:Successfully processed may_july_chunk_40
+INFO:root:Successfully processed may_july_chunk_381
+INFO:root:Successfully processed may_july_chunk_382
+INFO:root:Successfully processed may_july_chunk_383
+INFO:root:Successfully processed may_july_chunk_384
+INFO:root:Successfully processed may_july_chunk_385
+INFO:root:Successfully processed may_july_chunk_386
+INFO:root:Successfully processed may_july_chunk_387
+INFO:root:Successfully processed may_july_chunk_388
+INFO:root:Successfully processed may_july_chunk_389
+INFO:root:Successfully processed may_july_chunk_390
+INFO:root:Successfully processed may_july_chunk_391
+INFO:root:Successfully processed may_july_chunk_392
+INFO:root:Successfully processed may_july_chunk_393
+INFO:root:Successfully processed may_july_chunk_394
+INFO:root:Successfully processed may_july_chunk_395
+INFO:root:Successfully processed may_july_chunk_396
+INFO:root:Successfully processed may_july_chunk_397
+INFO:root:Successfully processed may_july_chunk_398
+INFO:root:Successfully processed may_july_chunk_399
+INFO:root:Successfully processed may_july_chunk_400
+INFO:root:Successfully processed may_july_chunk_401
+INFO:root:Successfully processed may_july_chunk_402
+INFO:root:Successfully processed may_july_chunk_403
+INFO:root:Successfully processed may_july_chunk_404
+INFO:root:Successfully processed may_july_chunk_405
+INFO:root:Successfully processed may_july_chunk_406
+INFO:root:Successfully processed may_july_chunk_407
+INFO:root:Successfully processed may_july_chunk_408
+INFO:root:Successfully processed may_july_chunk_409
+INFO:root:Successfully processed may_july_chunk_410
+INFO:root:Successfully processed may_july_chunk_411
+INFO:root:Successfully processed may_july_chunk_412
+INFO:root:Successfully processed may_july_chunk_413
+INFO:root:Successfully processed may_july_chunk_414
+INFO:root:Successfully processed may_july_chunk_415
+INFO:root:Successfully processed may_july_chunk_416
+INFO:root:Successfully processed may_july_chunk_417
+INFO:root:Successfully processed may_july_chunk_418
+INFO:root:Successfully processed may_july_chunk_419
+INFO:root:Successfully processed may_july_chunk_420
+INFO:root:Successfully processed may_july_chunk_421
+INFO:root:Successfully processed may_july_chunk_422
+INFO:root:Successfully processed may_july_chunk_423
+INFO:root:Successfully processed may_july_chunk_424
+INFO:root:Successfully processed may_july_chunk_425
+INFO:root:Successfully processed may_july_chunk_426
+INFO:root:Successfully processed may_july_chunk_427
+INFO:root:Successfully processed may_july_chunk_428
+INFO:root:Successfully processed may_july_chunk_429
+INFO:root:Successfully processed may_july_chunk_430
+INFO:root:Successfully processed may_july_chunk_431
+INFO:root:Successfully processed may_july_chunk_432
+INFO:root:Successfully processed may_july_chunk_433
+INFO:root:Successfully processed may_july_chunk_434
+INFO:root:Successfully processed may_july_chunk_435
+INFO:root:Successfully processed may_july_chunk_436
+INFO:root:Successfully processed may_july_chunk_437
+INFO:root:Successfully processed may_july_chunk_438
+INFO:root:Successfully processed may_july_chunk_439
+INFO:root:Successfully processed may_july_chunk_440
+INFO:root:Successfully processed aug_chunk_1
+INFO:root:Successfully processed aug_chunk_10
+INFO:root:Successfully processed aug_chunk_11
+INFO:root:Successfully processed aug_chunk_12
+INFO:root:Successfully processed aug_chunk_13
+INFO:root:Successfully processed aug_chunk_14
+INFO:root:Successfully processed aug_chunk_15
+INFO:root:Successfully processed aug_chunk_16
+INFO:root:Successfully processed aug_chunk_17
+INFO:root:Successfully processed aug_chunk_18
+INFO:root:Successfully processed aug_chunk_19
+INFO:root:Successfully processed aug_chunk_2
+INFO:root:Successfully processed aug_chunk_20
+INFO:root:Successfully processed aug_chunk_3
+INFO:root:Successfully processed aug_chunk_4
+INFO:root:Successfully processed aug_chunk_5
+INFO:root:Successfully processed aug_chunk_6
+INFO:root:Successfully processed aug_chunk_7
+INFO:root:Successfully processed aug_chunk_8
+INFO:root:Successfully processed aug_chunk_9
+INFO:root:Successfully processed aug_chunk_21
+INFO:root:Successfully processed aug_chunk_22
+INFO:root:Successfully processed aug_chunk_23
+INFO:root:Successfully processed aug_chunk_24
+INFO:root:Successfully processed aug_chunk_25
+INFO:root:Successfully processed aug_chunk_26
+INFO:root:Successfully processed aug_chunk_27
+INFO:root:Successfully processed aug_chunk_28
+INFO:root:Successfully processed aug_chunk_29
+INFO:root:Successfully processed aug_chunk_30
+INFO:root:Successfully processed aug_chunk_31
+INFO:root:Successfully processed aug_chunk_32
+INFO:root:Successfully processed aug_chunk_33
+INFO:root:Successfully processed aug_chunk_34
+INFO:root:Successfully processed aug_chunk_35
+INFO:root:Successfully processed aug_chunk_36
+INFO:root:Successfully processed aug_chunk_37
+INFO:root:Successfully processed aug_chunk_38
+INFO:root:Successfully processed aug_chunk_39
+INFO:root:Successfully processed aug_chunk_40
+INFO:root:Successfully processed aug_chunk_41
+INFO:root:Successfully processed aug_chunk_42
+INFO:root:Successfully processed aug_chunk_43
+INFO:root:Successfully processed aug_chunk_44
+INFO:root:Successfully processed aug_chunk_45
+INFO:root:Successfully processed aug_chunk_46
+INFO:root:Successfully processed aug_chunk_47
+INFO:root:Successfully processed aug_chunk_48
+INFO:root:Successfully processed aug_chunk_49
+INFO:root:Successfully processed aug_chunk_50
+INFO:root:Successfully processed aug_chunk_51
+INFO:root:Successfully processed aug_chunk_52
+INFO:root:Successfully processed aug_chunk_53
+INFO:root:Successfully processed aug_chunk_54
+INFO:root:Successfully processed aug_chunk_55
+INFO:root:Successfully processed aug_chunk_56
+INFO:root:Successfully processed aug_chunk_57
+INFO:root:Successfully processed aug_chunk_58
+INFO:root:Successfully processed aug_chunk_59
+INFO:root:Successfully processed aug_chunk_60
+INFO:root:Successfully processed aug_chunk_61
+INFO:root:Successfully processed aug_chunk_62
+INFO:root:Successfully processed aug_chunk_63
+INFO:root:Successfully processed aug_chunk_64
+INFO:root:Successfully processed aug_chunk_65
+INFO:root:Successfully processed aug_chunk_66
+INFO:root:Successfully processed aug_chunk_67
+INFO:root:Successfully processed aug_chunk_68
+INFO:root:Successfully processed aug_chunk_69
+INFO:root:Successfully processed aug_chunk_70
+INFO:root:Successfully processed aug_chunk_71
+INFO:root:Successfully processed aug_chunk_72
+INFO:root:Successfully processed aug_chunk_73
+INFO:root:Successfully processed aug_chunk_74
+INFO:root:Successfully processed aug_chunk_75
+INFO:root:Successfully processed aug_chunk_76
+INFO:root:Successfully processed aug_chunk_77
+INFO:root:Successfully processed aug_chunk_78
+INFO:root:Successfully processed aug_chunk_79
+INFO:root:Successfully processed aug_chunk_80
+INFO:root:Successfully processed aug_chunk_100
+INFO:root:Successfully processed aug_chunk_81
+INFO:root:Successfully processed aug_chunk_82
+INFO:root:Successfully processed aug_chunk_83
+INFO:root:Successfully processed aug_chunk_84
+INFO:root:Successfully processed aug_chunk_85
+INFO:root:Successfully processed aug_chunk_86
+INFO:root:Successfully processed aug_chunk_87
+INFO:root:Successfully processed aug_chunk_88
+INFO:root:Successfully processed aug_chunk_89
+INFO:root:Successfully processed aug_chunk_90
+INFO:root:Successfully processed aug_chunk_91
+INFO:root:Successfully processed aug_chunk_92
+INFO:root:Successfully processed aug_chunk_93
+INFO:root:Successfully processed aug_chunk_94
+INFO:root:Successfully processed aug_chunk_95
+INFO:root:Successfully processed aug_chunk_96
+INFO:root:Successfully processed aug_chunk_97
+INFO:root:Successfully processed aug_chunk_98
+INFO:root:Successfully processed aug_chunk_99
+INFO:root:Successfully processed aug_chunk_101
+INFO:root:Successfully processed aug_chunk_102
+INFO:root:Successfully processed aug_chunk_103
+INFO:root:Successfully processed aug_chunk_104
+INFO:root:Successfully processed aug_chunk_105
+INFO:root:Successfully processed aug_chunk_106
+INFO:root:Successfully processed aug_chunk_107
+INFO:root:Successfully processed aug_chunk_108
+INFO:root:Successfully processed aug_chunk_109
+INFO:root:Successfully processed aug_chunk_110
+INFO:root:Successfully processed aug_chunk_111
+INFO:root:Successfully processed aug_chunk_112
+INFO:root:Successfully processed aug_chunk_113
+INFO:root:Successfully processed aug_chunk_114
+INFO:root:Successfully processed aug_chunk_115
+INFO:root:Successfully processed aug_chunk_116
+INFO:root:Successfully processed aug_chunk_117
+INFO:root:Successfully processed september_chunk_1
+INFO:root:Successfully processed september_chunk_10
+INFO:root:Successfully processed september_chunk_11
+INFO:root:Successfully processed september_chunk_12
+INFO:root:Successfully processed september_chunk_13
+INFO:root:Successfully processed september_chunk_14
+INFO:root:Successfully processed september_chunk_15
+INFO:root:Successfully processed september_chunk_16
+INFO:root:Successfully processed september_chunk_17
+INFO:root:Successfully processed september_chunk_18
+INFO:root:Successfully processed september_chunk_19
+INFO:root:Successfully processed september_chunk_2
+INFO:root:Successfully processed september_chunk_20
+INFO:root:Successfully processed september_chunk_3
+INFO:root:Successfully processed september_chunk_4
+INFO:root:Successfully processed september_chunk_5
+INFO:root:Successfully processed september_chunk_6
+INFO:root:Successfully processed september_chunk_7
+INFO:root:Successfully processed september_chunk_8
+INFO:root:Successfully processed september_chunk_9
+INFO:root:Successfully processed may_july_chunk_41
+INFO:root:Successfully processed may_july_chunk_42
+INFO:root:Successfully processed may_july_chunk_43
+INFO:root:Successfully processed may_july_chunk_44
+INFO:root:Successfully processed may_july_chunk_45
+INFO:root:Successfully processed may_july_chunk_46
+INFO:root:Successfully processed may_july_chunk_47
+INFO:root:Successfully processed may_july_chunk_48
+INFO:root:Successfully processed may_july_chunk_49
+INFO:root:Successfully processed may_july_chunk_50
+INFO:root:Successfully processed may_july_chunk_51
+INFO:root:Successfully processed may_july_chunk_52
+INFO:root:Successfully processed may_july_chunk_53
+INFO:root:Successfully processed may_july_chunk_54
+INFO:root:Successfully processed may_july_chunk_55
+INFO:root:Successfully processed may_july_chunk_56
+INFO:root:Successfully processed may_july_chunk_57
+INFO:root:Successfully processed may_july_chunk_58
+INFO:root:Successfully processed may_july_chunk_59
+INFO:root:Successfully processed may_july_chunk_60
+INFO:root:Successfully processed september_chunk_21
+INFO:root:Successfully processed september_chunk_22
+INFO:root:Successfully processed september_chunk_23
+INFO:root:Successfully processed september_chunk_24
+INFO:root:Successfully processed september_chunk_25
+INFO:root:Successfully processed september_chunk_26
+INFO:root:Successfully processed september_chunk_27
+INFO:root:Successfully processed september_chunk_28
+INFO:root:Successfully processed september_chunk_29
+INFO:root:Successfully processed september_chunk_30
+INFO:root:Successfully processed september_chunk_31
+INFO:root:Successfully processed september_chunk_32
+INFO:root:Successfully processed september_chunk_33
+INFO:root:Successfully processed september_chunk_34
+INFO:root:Successfully processed september_chunk_35
+INFO:root:Successfully processed september_chunk_36
+INFO:root:Successfully processed september_chunk_37
+INFO:root:Successfully processed september_chunk_38
+INFO:root:Successfully processed september_chunk_39
+INFO:root:Successfully processed september_chunk_40
+INFO:root:Successfully processed september_chunk_41
+INFO:root:Successfully processed september_chunk_42
+INFO:root:Successfully processed september_chunk_43
+INFO:root:Successfully processed september_chunk_44
+INFO:root:Successfully processed september_chunk_45
+INFO:root:Successfully processed september_chunk_46
+INFO:root:Successfully processed september_chunk_47
+INFO:root:Successfully processed september_chunk_48
+INFO:root:Successfully processed september_chunk_49
+INFO:root:Successfully processed september_chunk_50
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_51
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_52
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_53
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_54
+INFO:root:Successfully processed september_chunk_55
+INFO:root:Successfully processed september_chunk_56
+INFO:root:Successfully processed september_chunk_57
+INFO:root:Successfully processed september_chunk_58
+INFO:root:Successfully processed september_chunk_59
+INFO:root:Successfully processed september_chunk_60
+INFO:root:Successfully processed september_chunk_61
+INFO:root:Successfully processed september_chunk_62
+INFO:root:Successfully processed september_chunk_63
+INFO:root:Successfully processed september_chunk_64
+INFO:root:Successfully processed september_chunk_65
+INFO:root:Successfully processed september_chunk_66
+INFO:root:Successfully processed september_chunk_67
+INFO:root:Successfully processed september_chunk_68
+INFO:root:Successfully processed september_chunk_69
+INFO:root:Successfully processed september_chunk_70
+INFO:root:Successfully processed september_chunk_71
+INFO:root:Successfully processed september_chunk_72
+INFO:root:Successfully processed september_chunk_73
+INFO:root:Successfully processed september_chunk_74
+INFO:root:Successfully processed september_chunk_75
+INFO:root:Successfully processed september_chunk_76
+INFO:root:Successfully processed september_chunk_77
+INFO:root:Successfully processed september_chunk_78
+INFO:root:Successfully processed september_chunk_79
+INFO:root:Successfully processed september_chunk_80
+INFO:root:Successfully processed september_chunk_100
+INFO:root:Successfully processed september_chunk_81
+INFO:root:Successfully processed september_chunk_82
+INFO:root:Successfully processed september_chunk_83
+INFO:root:Successfully processed september_chunk_84
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_85
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_86
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_87
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_88
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_89
+INFO:root:Successfully processed september_chunk_90
+INFO:root:Successfully processed september_chunk_91
+INFO:root:Successfully processed september_chunk_92
+INFO:root:Successfully processed september_chunk_93
+INFO:root:Successfully processed september_chunk_94
+INFO:root:Successfully processed september_chunk_95
+INFO:root:Successfully processed september_chunk_96
+INFO:root:Successfully processed september_chunk_97
+INFO:root:Successfully processed september_chunk_98
+INFO:root:Successfully processed september_chunk_99
+INFO:root:Successfully processed september_chunk_101
+INFO:root:Successfully processed september_chunk_102
+INFO:root:Successfully processed september_chunk_103
+INFO:root:Successfully processed september_chunk_104
+INFO:root:Successfully processed september_chunk_105
+INFO:root:Successfully processed september_chunk_106
+INFO:root:Successfully processed september_chunk_107
+INFO:root:Successfully processed september_chunk_108
+INFO:root:Successfully processed september_chunk_109
+INFO:root:Successfully processed september_chunk_110
+INFO:root:Successfully processed september_chunk_111
+INFO:root:Successfully processed september_chunk_112
+INFO:root:Successfully processed september_chunk_113
+INFO:root:Successfully processed september_chunk_114
+INFO:root:Successfully processed september_chunk_115
+INFO:root:Successfully processed september_chunk_116
+INFO:root:Successfully processed september_chunk_117
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_118
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_119
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_120
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_121
+INFO:root:Successfully processed september_chunk_122
+INFO:root:Successfully processed september_chunk_123
+INFO:root:Successfully processed september_chunk_124
+INFO:root:Successfully processed september_chunk_125
+INFO:root:Successfully processed september_chunk_126
+INFO:root:Successfully processed september_chunk_127
+INFO:root:Successfully processed september_chunk_128
+INFO:root:Successfully processed september_chunk_129
+INFO:root:Successfully processed september_chunk_130
+INFO:root:Successfully processed september_chunk_131
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_132
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_133
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_134
+ERROR:root:Error with cleaning tweet
+Traceback (most recent call last):
+  File "F:\Milestone 2\preprocesssing.py", line 8, in clean_tweet
+    df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "F:\Milestone 2\x-24-us-election\.venv\Lib\site-packages\pandas\core\strings\accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+INFO:root:Successfully processed september_chunk_135
+INFO:root:Successfully processed september_chunk_136
+INFO:root:Successfully processed september_chunk_137
+INFO:root:Successfully processed september_chunk_138
+INFO:root:Successfully processed september_chunk_139
+INFO:root:Successfully processed september_chunk_140
+INFO:root:Successfully processed october_chunk_1
+INFO:root:Successfully processed october_chunk_10
+INFO:root:Successfully processed october_chunk_11
+INFO:root:Successfully processed october_chunk_12
+INFO:root:Successfully processed october_chunk_13
+INFO:root:Successfully processed october_chunk_14
+INFO:root:Successfully processed october_chunk_15
+INFO:root:Successfully processed october_chunk_16
+INFO:root:Successfully processed october_chunk_17
+INFO:root:Successfully processed october_chunk_18
+INFO:root:Successfully processed october_chunk_19
+INFO:root:Successfully processed october_chunk_2
+INFO:root:Successfully processed october_chunk_20
+INFO:root:Successfully processed october_chunk_3
+INFO:root:Successfully processed october_chunk_4
+INFO:root:Successfully processed october_chunk_5
+INFO:root:Successfully processed october_chunk_6
+INFO:root:Successfully processed october_chunk_7
+INFO:root:Successfully processed october_chunk_8
+INFO:root:Successfully processed october_chunk_9
+INFO:root:Successfully processed october_chunk_21
+INFO:root:Successfully processed october_chunk_22
+INFO:root:Successfully processed october_chunk_23
+INFO:root:Successfully processed october_chunk_24
+INFO:root:Successfully processed november_chunk_1
+INFO:root:Successfully processed november_chunk_10
+INFO:root:Successfully processed november_chunk_11
+INFO:root:Successfully processed november_chunk_12
+INFO:root:Successfully processed november_chunk_13
+INFO:root:Successfully processed november_chunk_14
+INFO:root:Successfully processed november_chunk_15
+INFO:root:Successfully processed november_chunk_16
+INFO:root:Successfully processed november_chunk_17
+INFO:root:Successfully processed november_chunk_18
+INFO:root:Successfully processed november_chunk_19
+INFO:root:Successfully processed november_chunk_2
+INFO:root:Successfully processed november_chunk_20
+INFO:root:Successfully processed november_chunk_3
+INFO:root:Successfully processed november_chunk_4
+INFO:root:Successfully processed november_chunk_5
+INFO:root:Successfully processed november_chunk_6
+INFO:root:Successfully processed november_chunk_7
+INFO:root:Successfully processed november_chunk_8
+INFO:root:Successfully processed november_chunk_9
+INFO:root:Successfully processed may_july_chunk_61
+INFO:root:Successfully processed may_july_chunk_62
+INFO:root:Successfully processed may_july_chunk_63
+INFO:root:Successfully processed may_july_chunk_64
+INFO:root:Successfully processed may_july_chunk_65
+INFO:root:Successfully processed may_july_chunk_66
+INFO:root:Successfully processed may_july_chunk_67
+INFO:root:Successfully processed may_july_chunk_68
+INFO:root:Successfully processed may_july_chunk_69
+INFO:root:Successfully processed may_july_chunk_70
+INFO:root:Successfully processed may_july_chunk_71
+INFO:root:Successfully processed may_july_chunk_72
+INFO:root:Successfully processed may_july_chunk_73
+INFO:root:Successfully processed may_july_chunk_74
+INFO:root:Successfully processed may_july_chunk_75
+INFO:root:Successfully processed may_july_chunk_76
+INFO:root:Successfully processed may_july_chunk_77
+INFO:root:Successfully processed may_july_chunk_78
+INFO:root:Successfully processed may_july_chunk_79
+INFO:root:Successfully processed may_july_chunk_80
+INFO:root:Successfully processed november_chunk_21
+INFO:root:Successfully processed november_chunk_22
+INFO:root:Successfully processed november_chunk_23
+INFO:root:Successfully processed november_chunk_24
+INFO:root:Successfully processed november_chunk_25
+INFO:root:Successfully processed november_chunk_26
+INFO:root:Successfully processed november_chunk_27
+INFO:root:Successfully processed november_chunk_28
+INFO:root:Successfully processed november_chunk_29
+INFO:root:Successfully processed november_chunk_30
+INFO:root:Successfully processed november_chunk_31
+INFO:root:Successfully processed november_chunk_32
+INFO:root:Successfully processed november_chunk_33
+INFO:root:Successfully processed november_chunk_34
+INFO:root:Successfully processed november_chunk_35
+INFO:root:Successfully processed november_chunk_36
+INFO:root:Successfully processed november_chunk_37
+INFO:root:Successfully processed november_chunk_38
+INFO:root:Successfully processed november_chunk_39
+INFO:root:Successfully processed november_chunk_40
+INFO:root:Successfully processed november_chunk_41
+INFO:root:Successfully processed november_chunk_42
+INFO:root:Successfully processed november_chunk_43
+INFO:root:Successfully processed november_chunk_44
+INFO:root:Successfully processed november_chunk_45
+INFO:root:Successfully processed november_chunk_46
+INFO:root:Successfully processed november_chunk_47
+INFO:root:Successfully processed november_chunk_48
+INFO:root:Successfully processed november_chunk_49
+INFO:root:Successfully processed november_chunk_50
+INFO:root:Successfully processed november_chunk_51
+INFO:root:Successfully processed november_chunk_52
+INFO:root:Successfully processed november_chunk_53
+INFO:root:Successfully processed november_chunk_54
+INFO:root:Successfully processed november_chunk_55
+INFO:root:Successfully processed november_chunk_56
+INFO:root:Successfully processed november_chunk_57
+INFO:root:Successfully processed november_chunk_58
+INFO:root:Successfully processed november_chunk_59
+INFO:root:Successfully processed november_chunk_60
+INFO:root:Successfully processed november_chunk_61
+INFO:root:Successfully processed november_chunk_62
+INFO:root:Successfully processed november_chunk_63
+INFO:root:Successfully processed november_chunk_64
+INFO:root:Successfully processed november_chunk_65
+INFO:root:Successfully processed november_chunk_66
+INFO:root:Successfully processed november_chunk_67
+INFO:root:Successfully processed november_chunk_68
+INFO:root:Successfully processed november_chunk_69
+INFO:root:Successfully processed november_chunk_70
+INFO:root:Successfully processed november_chunk_71
+INFO:root:Successfully processed november_chunk_72
+INFO:root:Successfully processed november_chunk_73
+INFO:root:Successfully processed november_chunk_74
+INFO:root:Successfully processed november_chunk_75
+INFO:root:Successfully processed november_chunk_76
+INFO:root:Successfully processed november_chunk_77
+INFO:root:Successfully processed november_chunk_78
+INFO:root:Successfully processed november_chunk_79
+INFO:root:Successfully processed november_chunk_80
+INFO:root:Successfully processed november_chunk_100
+INFO:root:Successfully processed november_chunk_81
+INFO:root:Successfully processed november_chunk_82
+INFO:root:Successfully processed november_chunk_83
+INFO:root:Successfully processed november_chunk_84
+INFO:root:Successfully processed november_chunk_85
+INFO:root:Successfully processed november_chunk_86
+INFO:root:Successfully processed november_chunk_87
+INFO:root:Successfully processed november_chunk_88
+INFO:root:Successfully processed november_chunk_89
+INFO:root:Successfully processed november_chunk_90
+INFO:root:Successfully processed november_chunk_91
+INFO:root:Successfully processed november_chunk_92
+INFO:root:Successfully processed november_chunk_93
+INFO:root:Successfully processed november_chunk_94
+INFO:root:Successfully processed november_chunk_95
+INFO:root:Successfully processed november_chunk_96
+INFO:root:Successfully processed november_chunk_97
+INFO:root:Successfully processed november_chunk_98
+INFO:root:Successfully processed november_chunk_99
+INFO:root:Successfully processed november_chunk_101
+INFO:root:Successfully processed november_chunk_102
+INFO:root:Successfully processed november_chunk_103
+INFO:root:Successfully processed november_chunk_104
+INFO:root:Successfully processed november_chunk_105
+INFO:root:Successfully processed november_chunk_106
+INFO:root:Successfully processed november_chunk_107
+INFO:root:Successfully processed november_chunk_108
+INFO:root:Successfully processed november_chunk_109
+INFO:root:Successfully processed november_chunk_110
+INFO:root:Successfully processed november_chunk_111
+INFO:root:Successfully processed november_chunk_112
+INFO:root:Successfully processed november_chunk_113
+INFO:root:Successfully processed octobergap_chunk_1
+INFO:root:Successfully processed octobergap_chunk_10
+INFO:root:Successfully processed octobergap_chunk_11
+INFO:root:Successfully processed octobergap_chunk_12
+INFO:root:Successfully processed octobergap_chunk_13
+INFO:root:Successfully processed octobergap_chunk_14
+INFO:root:Successfully processed octobergap_chunk_15
+INFO:root:Successfully processed octobergap_chunk_16
+INFO:root:Successfully processed octobergap_chunk_17
+INFO:root:Successfully processed octobergap_chunk_18
+INFO:root:Successfully processed octobergap_chunk_19
+INFO:root:Successfully processed octobergap_chunk_2
+INFO:root:Successfully processed octobergap_chunk_20
+INFO:root:Successfully processed octobergap_chunk_3
+INFO:root:Successfully processed octobergap_chunk_4
+INFO:root:Successfully processed octobergap_chunk_5
+INFO:root:Successfully processed octobergap_chunk_6
+INFO:root:Successfully processed octobergap_chunk_7
+INFO:root:Successfully processed octobergap_chunk_8
+INFO:root:Successfully processed octobergap_chunk_9
+INFO:root:Successfully processed octobergap_chunk_21
+INFO:root:Successfully processed octobergap_chunk_22
+INFO:root:Successfully processed octobergap_chunk_23
+INFO:root:Successfully processed octobergap_chunk_24
+INFO:root:Successfully processed octobergap_chunk_25
+INFO:root:Successfully processed octobergap_chunk_26
+INFO:root:Successfully processed octobergap_chunk_27
+INFO:root:Successfully processed octobergap_chunk_28
+INFO:root:Successfully processed octobergap_chunk_29
+INFO:root:Successfully processed octobergap_chunk_30
+INFO:root:Successfully processed octobergap_chunk_31
+INFO:root:Successfully processed octobergap_chunk_32
+INFO:root:Successfully processed octobergap_chunk_33
+INFO:root:Successfully processed octobergap_chunk_34
+INFO:root:Successfully processed octobergap_chunk_35
+INFO:root:Successfully processed octobergap_chunk_36
+INFO:root:Successfully processed octobergap_chunk_37
+INFO:root:Successfully processed octobergap_chunk_38
+INFO:root:Successfully processed octobergap_chunk_39
+INFO:root:Successfully processed octobergap_chunk_40
+INFO:root:Successfully processed octobergap_chunk_41
+INFO:root:Successfully processed octobergap_chunk_42
+INFO:root:Successfully processed octobergap_chunk_43
+INFO:root:Successfully processed octobergap_chunk_44
+INFO:root:Successfully processed octobergap_chunk_45
+INFO:root:Successfully processed octobergap_chunk_46
+INFO:root:Successfully processed octobergap_chunk_47
+INFO:root:Successfully processed may_july_chunk_100
+INFO:root:Successfully processed may_july_chunk_81
+INFO:root:Successfully processed may_july_chunk_82
+INFO:root:Successfully processed may_july_chunk_83
+INFO:root:Successfully processed may_july_chunk_84
+INFO:root:Successfully processed may_july_chunk_85
+INFO:root:Successfully processed may_july_chunk_86
+INFO:root:Successfully processed may_july_chunk_87
+INFO:root:Successfully processed may_july_chunk_88
+INFO:root:Successfully processed may_july_chunk_89
+INFO:root:Successfully processed may_july_chunk_90
+INFO:root:Successfully processed may_july_chunk_91
+INFO:root:Successfully processed may_july_chunk_92
+INFO:root:Successfully processed may_july_chunk_93
+INFO:root:Successfully processed may_july_chunk_94
+INFO:root:Successfully processed may_july_chunk_95
+INFO:root:Successfully processed may_july_chunk_96
+INFO:root:Successfully processed may_july_chunk_97
+INFO:root:Successfully processed may_july_chunk_98
+INFO:root:Successfully processed may_july_chunk_99
+INFO:root:Successfully processed may_july_chunk_101
+INFO:root:Successfully processed may_july_chunk_102
+INFO:root:Successfully processed may_july_chunk_103
+INFO:root:Successfully processed may_july_chunk_104
+INFO:root:Successfully processed may_july_chunk_105
+INFO:root:Successfully processed may_july_chunk_106
+INFO:root:Successfully processed may_july_chunk_107
+INFO:root:Successfully processed may_july_chunk_108
+INFO:root:Successfully processed may_july_chunk_109
+INFO:root:Successfully processed may_july_chunk_110
+INFO:root:Successfully processed may_july_chunk_111
+INFO:root:Successfully processed may_july_chunk_112
+INFO:root:Successfully processed may_july_chunk_113
+INFO:root:Successfully processed may_july_chunk_114
+INFO:root:Successfully processed may_july_chunk_115
+INFO:root:Successfully processed may_july_chunk_116
+INFO:root:Successfully processed may_july_chunk_117
+INFO:root:Successfully processed may_july_chunk_118
+INFO:root:Successfully processed may_july_chunk_119
+INFO:root:Successfully processed may_july_chunk_120
+INFO:root:Successfully processed may_july_chunk_121
+INFO:root:Successfully processed may_july_chunk_122
+INFO:root:Successfully processed may_july_chunk_123
+INFO:root:Successfully processed may_july_chunk_124
+INFO:root:Successfully processed may_july_chunk_125
+INFO:root:Successfully processed may_july_chunk_126
+INFO:root:Successfully processed may_july_chunk_127
+INFO:root:Successfully processed may_july_chunk_128
+INFO:root:Successfully processed may_july_chunk_129
+INFO:root:Successfully processed may_july_chunk_130
+INFO:root:Successfully processed may_july_chunk_131
+INFO:root:Successfully processed may_july_chunk_132
+INFO:root:Successfully processed may_july_chunk_133
+INFO:root:Successfully processed may_july_chunk_134
+INFO:root:Successfully processed may_july_chunk_135
+INFO:root:Successfully processed may_july_chunk_136
+INFO:root:Successfully processed may_july_chunk_137
+INFO:root:Successfully processed may_july_chunk_138
+INFO:root:Successfully processed may_july_chunk_139
+INFO:root:Successfully processed may_july_chunk_140
+INFO:root:Successfully processed may_july_chunk_141
+INFO:root:Successfully processed may_july_chunk_142
+INFO:root:Successfully processed may_july_chunk_143
+INFO:root:Successfully processed may_july_chunk_144
+INFO:root:Successfully processed may_july_chunk_145
+INFO:root:Successfully processed may_july_chunk_146
+INFO:root:Successfully processed may_july_chunk_147
+INFO:root:Successfully processed may_july_chunk_148
+INFO:root:Successfully processed may_july_chunk_149
+INFO:root:Successfully processed may_july_chunk_150
+INFO:root:Successfully processed may_july_chunk_151
+INFO:root:Successfully processed may_july_chunk_152
+INFO:root:Successfully processed may_july_chunk_153
+INFO:root:Successfully processed may_july_chunk_154
+INFO:root:Successfully processed may_july_chunk_155
+INFO:root:Successfully processed may_july_chunk_156
+INFO:root:Successfully processed may_july_chunk_157
+INFO:root:Successfully processed may_july_chunk_158
+INFO:root:Successfully processed may_july_chunk_159
+INFO:root:Successfully processed may_july_chunk_160
+INFO:root:Successfully processed may_july_chunk_161
+INFO:root:Successfully processed may_july_chunk_162
+INFO:root:Successfully processed may_july_chunk_163
+INFO:root:Successfully processed may_july_chunk_164
+INFO:root:Successfully processed may_july_chunk_165
+INFO:root:Successfully processed may_july_chunk_166
+INFO:root:Successfully processed may_july_chunk_167
+INFO:root:Successfully processed may_july_chunk_168
+INFO:root:Successfully processed may_july_chunk_169
+INFO:root:Successfully processed may_july_chunk_170
+INFO:root:Successfully processed may_july_chunk_171
+INFO:root:Successfully processed may_july_chunk_172
+INFO:root:Successfully processed may_july_chunk_173
+INFO:root:Successfully processed may_july_chunk_174
+INFO:root:Successfully processed may_july_chunk_175
+INFO:root:Successfully processed may_july_chunk_176
+INFO:root:Successfully processed may_july_chunk_177
+INFO:root:Successfully processed may_july_chunk_178
+INFO:root:Successfully processed may_july_chunk_179
+INFO:root:Successfully processed may_july_chunk_180
