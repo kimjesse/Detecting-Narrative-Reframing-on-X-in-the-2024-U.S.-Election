@@ -9,10 +9,6 @@ real issues, and noise floor when they're ready. Everything else should run unch
 # %%
 # SECTION 1: SETUP
 
-# This is needed because our repo's GitHub check runs Python 3.8, which crashes on
-# type hints (labels like list[str] that say what kind of value a function expects).
-from __future__ import annotations
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import TimeSeriesSplit
@@ -23,7 +19,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import (
-    average_precision_score, f1_score, precision_score, recall_score, 
+    average_precision_score, f1_score, precision_score, recall_score,
 )
 
 
@@ -32,9 +28,8 @@ RANDOM_SEED = 42
 
 N_WEEKS = 31
 N_TOPICS = 5
-FAKE_ISSUES = ['economy','immigration', 'democracy', 'abortion']
+FAKE_ISSUES = ("economy", "immigration", "democracy", "abortion")
 NOISE_FLOOR =0.05
-
 
 
 
@@ -67,7 +62,7 @@ def make_fake_feature_table(
     df["js_divergence"] = np.where(
         df["label"] == 1, rng.uniform(0.05, 0.30, n_rows), rng.uniform(0.00, 0.10, n_rows)
     )
-    df.loc[df["week_start"] == week_starts[0], "js_divergence"] = np.nan  # week 1 has no "last week"
+    df.loc[df["week_start"] == week_starts[0], "js_divergence"] = np.nan
     df["js_minus_noise"] = df["js_divergence"] - noise_floor
 
     # z-score vs. this issue's past weeks
@@ -105,19 +100,6 @@ def prepare_table(df: pd.DataFrame) -> pd.DataFrame:
     df["lag1_js"] = df.groupby("issue")["js_divergence"].shift(1)
     df["lag2_js"] = df.groupby("issue")["js_divergence"].shift(2)
     return df
-
-
-# %% Test Section 2
-df = prepare_table(make_fake_feature_table())
-# To use the real table later:  df = prepare_table(pd.read_parquet("feature_table.parquet"))
-
-# The first few weeks of each issue have no history (no lags / z-score). Can't be used.
-rows_before = len(df)
-df = df.dropna(subset=["js_divergence", "js_zscore", "lag1_js", "lag2_js"]).reset_index(drop=True)
-
-print(f"{len(df)} rows kept, {rows_before - len(df)} early rows dropped")
-print(f"Shift rate: {df['label'].mean():.1%}")
-print(df.groupby("label")["js_divergence"].mean().round(3))  # shifts should be higher
 
 
 
@@ -158,21 +140,6 @@ def week_based_folds(
         folds.append((train_rows, test_rows))
 
     return folds
-
-
-# %% Test Section 3
-folds = week_based_folds(df)
-
-for fold_num, (train_rows, test_rows) in enumerate(folds, start=1):
-    train_weeks = df.loc[train_rows, "week_idx"]
-    test_weeks = df.loc[test_rows, "week_idx"]
-    print(
-        f"Fold {fold_num}: train weeks {train_weeks.min()}-{train_weeks.max()} "
-        f"({len(train_rows)} rows), test weeks {test_weeks.min()}-{test_weeks.max()} "
-        f"({len(test_rows)} rows, {df.loc[test_rows, 'label'].sum()} shifts)"
-    )
-
-
 
 
 
@@ -216,7 +183,7 @@ def make_models(random_state: int = RANDOM_SEED) -> dict:
         # count more during fitting (no separate sample_weight step needed).
         # min_samples_leaf = the fewest rows allowed in each branch of a tree.
         # The default 20 is too big for our small folds (fold 1 has only 24 training rows)
-        # so the trees couldn't split at all. 5 lets them learn. **NOTE to revisit this when tuning.**
+        # so trees couldn't split. 5 lets them learn. **NOTE to revisit this when tuning.**
         # https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting
         "Gradient-Boosted Trees": HistGradientBoostingClassifier(
             max_depth=2, max_iter=100, learning_rate=0.1,
@@ -235,7 +202,9 @@ def make_models(random_state: int = RANDOM_SEED) -> dict:
     return models
 
 
-def js_baseline_predict(train_df: pd.DataFrame, test_df: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
+def js_baseline_predict(
+    train_df: pd.DataFrame, test_df: pd.DataFrame
+) -> tuple[np.ndarray, np.ndarray]:
     """Baseline 2: identify the weeks with the biggest JS increases.
     If 15% of training weeks are shifts, identify the top 15%.
 """
@@ -256,14 +225,14 @@ def js_baseline_predict(train_df: pd.DataFrame, test_df: pd.DataFrame) -> tuple[
 # https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-and-f-measures
 # https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html
 
-def shift_scores(model, X_test: pd.DataFrame) -> np.ndarray:
+def shift_scores(model, x_test: pd.DataFrame) -> np.ndarray:
     """How strongly the model thinks each row is a shift (higher = more likely).
     Needed for PR-AUC. SVM has no probabilities, so we use its decision_function
     (distance from the boundary), which ranks rows just as well."""
 
     if hasattr(model, "predict_proba"):
-        return model.predict_proba(X_test)[:, 1]
-    return model.decision_function(X_test)
+        return model.predict_proba(x_test)[:, 1]
+    return model.decision_function(x_test)
 
 
 METRICS = ["precision", "recall", "f1", "pr_auc"]
@@ -288,28 +257,41 @@ def score_fold(y_test: pd.Series, predictions: np.ndarray, scores: np.ndarray) -
     }
 
 
-def evaluate_all(df: pd.DataFrame, folds: list, random_state: int = RANDOM_SEED) -> pd.DataFrame:
-    """Train and score every model and baseline on every fold.
-    Returns one row per (model, fold)."""
+def evaluate_fold(
+    train_df: pd.DataFrame, test_df: pd.DataFrame, random_state: int = RANDOM_SEED
+) -> list[dict]:
+    """Train and score every model and baseline on ONE fold.
+    Returns one dict of scores per model."""
 
-    results = []
+    x_train, y_train = train_df[FEATURES], train_df["label"]
+    x_test, y_test = test_df[FEATURES], test_df["label"]
+    fold_results = []
+
+    # New untrained models for every fold, so nothing carries over
+    for name, model in make_models(random_state).items():
+        model.fit(x_train, y_train)
+        scores = score_fold(y_test, model.predict(x_test), shift_scores(model, x_test))
+        fold_results.append({"model": name, **scores})
+
+    # The JS baseline doesn't learn so it's handled separately
+    predictions, js_scores = js_baseline_predict(train_df, test_df)
+    scores = score_fold(y_test, predictions, js_scores)
+    fold_results.append({"model": "Baseline: biggest JS jumps", **scores})
+
+    return fold_results
+
+
+def evaluate_all(
+    table: pd.DataFrame, folds: list, random_state: int = RANDOM_SEED
+) -> pd.DataFrame:
+    """Run evaluate_fold on every fold. Returns one row per (model, fold)."""
+
+    all_results = []
     for fold_num, (train_rows, test_rows) in enumerate(folds, start=1):
-        train_df, test_df = df.loc[train_rows], df.loc[test_rows]
-        X_train, y_train = train_df[FEATURES], train_df["label"]
-        X_test, y_test = test_df[FEATURES], test_df["label"]
-
-        # New untrained models for every fold, so nothing carries over
-        for name, model in make_models(random_state).items():
-            model.fit(X_train, y_train)
-            fold_scores = score_fold(y_test, model.predict(X_test), shift_scores(model, X_test))
-            results.append({"model": name, "fold": fold_num, **fold_scores})
-
-        # The JS baseline doesn't learn so it's handled separately
-        predictions, scores = js_baseline_predict(train_df, test_df)
-        fold_scores = score_fold(y_test, predictions, scores)
-        results.append({"model": "Baseline: biggest JS jumps", "fold": fold_num, **fold_scores})
-
-    return pd.DataFrame(results)
+        fold_results = evaluate_fold(table.loc[train_rows], table.loc[test_rows], random_state)
+        for row in fold_results:
+            all_results.append({"fold": fold_num, **row})
+    return pd.DataFrame(all_results)
 
 
 def summarize(results: pd.DataFrame) -> pd.DataFrame:
@@ -322,6 +304,43 @@ def summarize(results: pd.DataFrame) -> pd.DataFrame:
     return summary
 
 
-# %% Test Section 5
-results = evaluate_all(df, folds)
-print(summarize(results).to_string())
+
+
+
+# %%
+# SECTION 5: RUN ALL
+def main() -> None:
+    """Build the table, make the folds, train and score every model, print results."""
+
+    # Section 2: build the table
+    df = prepare_table(make_fake_feature_table())
+    # Replace the line above to use the real table later:
+    # df = prepare_table(pd.read_parquet("<path to feature table>"))
+
+    # The first few weeks of each issue have no history (no lags/z-score). Can't be used.
+    rows_before = len(df)
+    history_cols = ["js_divergence", "js_zscore", "lag1_js", "lag2_js"]
+    df = df.dropna(subset=history_cols).reset_index(drop=True)
+
+    print(f"{len(df)} rows kept, {rows_before - len(df)} early rows dropped")
+    print(f"Shift rate: {df['label'].mean():.1%}")
+    print(df.groupby("label")["js_divergence"].mean().round(3))
+
+    # Section 3: which weeks land in each fold
+    folds = week_based_folds(df)
+    for fold_num, (train_rows, test_rows) in enumerate(folds, start=1):
+        train_weeks = df.loc[train_rows, "week_idx"]
+        test_weeks = df.loc[test_rows, "week_idx"]
+        print(
+            f"Fold {fold_num}: train weeks {train_weeks.min()}-{train_weeks.max()} "
+            f"({len(train_rows)} rows), test weeks {test_weeks.min()}-{test_weeks.max()} "
+            f"({len(test_rows)} rows, {df.loc[test_rows, 'label'].sum()} shifts)"
+        )
+
+    # Section 5: every model on every fold
+    results = evaluate_all(df, folds)
+    print(summarize(results).to_string())
+
+
+if __name__ == "__main__":
+    main()
