@@ -9,6 +9,10 @@ real issues, and noise floor when they're ready. Everything else should run unch
 # %%
 # SECTION 1: SETUP
 
+# This is needed because our repo's GitHub check runs Python 3.8, which crashes on
+# type hints (labels like list[str] that say what kind of value a function expects).
+from __future__ import annotations
+
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import TimeSeriesSplit
