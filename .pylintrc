@@ -1,0 +1,9 @@
+[MESSAGES CONTROL]
+
+disable=missing-module-docstring,
+        missing-function-docstring,
+        missing-class-docstring
+
+[MAIN]
+# Ignores a directory named 'migrations' anywhere in the path
+ignore-paths=^.*/outdated_files/.*$
