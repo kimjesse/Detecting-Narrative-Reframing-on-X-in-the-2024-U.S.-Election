@@ -1,8 +1,9 @@
+import logging
 import csv
-import glob
 from pathlib import Path
 import pandas as pd
-import gzip
+
+logger = logging.getLogger(__name__)
 
 def get_headers():
     # Find all CSV files in the target directory

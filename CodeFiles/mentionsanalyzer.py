@@ -1,13 +1,14 @@
-import ast
-import pandas as pd
+import re
 import logging
 from pathlib import Path
-import re
-import fastparquet
+import ast
+import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 def get_mentioned_users(df):
     en = df[['mentionedUsers']]
-    en['mentionedUsers'] = en['mentionedUsers'].apply(lambda x: ast.literal_eval(x))
+    en['mentionedUsers'] = en['mentionedUsers'].apply(ast.literal_eval)
     # 1. Explode the list (missing rows are safely kept as NaN)
     exploded_df = en.explode('mentionedUsers').reset_index(drop=True)
 
@@ -25,10 +26,6 @@ def get_mentioned_users(df):
     other_cols = exploded_df.drop(columns=['mentionedUsers'])
     return pd.concat([other_cols, normalized_cols], axis=1)
 
-    #return users
-
-
-
 def run_pipeline():
     directory = Path("../x-24-us-election/")
     output_dir = Path("../testing")
@@ -41,29 +38,25 @@ def run_pipeline():
         try:
             en = df[df['lang'] == 'en']
             users = get_mentioned_users(en)
-            output_file_path = output_dir / name
+            #output_file_path = output_dir / name
             if not users.empty:
                 user_list.append(users)
-
             output_file_path = output_dir / name
             users.to_csv(f"{output_file_path}.csv", index=False)
-            logging.info(f"Successfully processed {name}")
-        except:
-            logging.exception(f"Error with file {name}")
-
+            logger.info("Successfully processed %s", name)
+        except IndexError:
+            logger.exception("Error with file %s", name)
     return user_list
 
 
 
-def find_frequency(user_list):
-    flats = pd.concat(user_list, axis=0)
-    fastparquet.write('outfile.parq', flats)
+def find_frequency(users_list):
+    flats = pd.concat(users_list, axis=0)
     flats['handle'] = flats['screen_name'].fillna(flats['username'])
     flats['master_id'] = flats['id_str'].fillna(flats['id'])
     result = flats[['master_id', 'handle']]
-    countlist = result.groupby(['handle']).agg(count=('handle', 'size'))
-    countlist.to_csv("countlist.csv")
+    count_list = result.groupby(['handle']).agg(count=('handle', 'size'))
+    count_list.to_csv("countlist.csv")
 
 if __name__ == '__main__':
-    user_list = run_pipeline()
-    find_frequency(user_list)
+    find_frequency(run_pipeline())
