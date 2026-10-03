@@ -9,10 +9,6 @@ real issues, and noise floor when they're ready. Everything else should run unch
 # %%
 # SECTION 1: SETUP
 
-# This is needed because our repo's GitHub check runs Python 3.8, which crashes on
-# type hints (labels like list[str] that say what kind of value a function expects).
-from __future__ import annotations
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import TimeSeriesSplit
@@ -91,8 +87,7 @@ def make_fake_feature_table(
 
 
 def prepare_table(df: pd.DataFrame) -> pd.DataFrame:
-    """Steps that run on BOTH the fake and the real table.
-    This is the swap point: later, pass in the real parquet instead."""
+    """Sort by issue then week, add week_idx and lag features. Returns a new table."""
 
     df = df.sort_values(["issue", "week_start"]).copy()
 
@@ -150,8 +145,8 @@ def week_based_folds(
 
 # %%
 # SECTION 4: MODELS AND BASELINES
-# Columns the models learn from. Everything else (week_start, week_idx, issue, label)
-# is an ID or the answer, not a feature.
+# Columns the models learn from. Everything else is an ID or the answer
+# (week_start, week_idx, issue, label)
 FEATURES = [
     "weekly_orig_total",
     "orig_tweet_count",
