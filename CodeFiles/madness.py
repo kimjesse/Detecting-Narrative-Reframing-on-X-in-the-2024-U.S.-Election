@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 def process_df(df):
     try:
-        df = df[(df['lang'] == 'en') & (df['retweetedTweet'] is False)]
+        df = df[(df['lang'] == 'en') & (df['retweetedTweet'] is not True)]
         df['date'] = pd.to_datetime(df['date'])
         df = df[df['date'] >= pd.to_datetime('2024-05-01')]
         df['rawContent'] = df['rawContent'].astype(str)
@@ -26,12 +26,18 @@ def process_df(df):
         df['cleanedTweet'] = (df['cleanedTweet'].
                               str.replace(r"^.{0,5}(@\S*\b\s)+|(https:\S*\b)",
                                           lambda m: "",regex=True))
+        df['cleanedTweet'] = df['cleanedTweet'].str.replace(r"\s+s\s+", "'s ",regex=True)
+        df['cleanedTweet'] = df['cleanedTweet'].str.replace(r"\s+t\s+", "'t ",regex=True)
+        df['cleanedTweet'] = df['cleanedTweet'].str.replace(r"\s+u\s+", " you ", regex=True)
         df['cleanedTweet'] = df['cleanedTweet'].str.replace(r'\s+', ' ', regex=True)
         df['week'] = (df['date'] - START_DATE).dt.days // 7
+        return df
     except IndexError:
         logging.exception("Error with execution")
+        return pd.DataFrame(["Error with execution"])
     except KeyError:
         logging.exception("Error with execution")
+        return pd.DataFrame(["Error with execution"])
 
 def fix_headers():
     directory = Path("../x-24-us-election")
@@ -41,7 +47,7 @@ def fix_headers():
     for file in files:
         try:
             df = pd.read_csv(file, low_memory=False)
-            process_df(df)
+            df = process_df(df)
             name = re.search(r'(.*).csv.gz', file.name).group(1)
             if "inReplyToUser" in df.columns:
                 df = df.rename(columns={"inReplyToUser": "in_reply_to_screen_name",
