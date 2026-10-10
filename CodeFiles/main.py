@@ -1,8 +1,8 @@
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
-import madness
-import sampling
+import raw_sampling
+
 
 def setup_logging(log_file="milestone2.log", level=logging.INFO):
     """Configures the root logger for the entire application."""
@@ -41,6 +41,7 @@ logger = logging.getLogger()
 
 if __name__ == "__main__":
     logger.info("Application has started successfully.")
-    madness.fix_headers()
-    sampling.sampling()
+    raw_sample = raw_sampling.sampling()
+    output = raw_sampling.process_df(raw_sample)
+    output.to_csv("sampleddata.csv", index=False)
     logger.info("Application has finished successfully.")
