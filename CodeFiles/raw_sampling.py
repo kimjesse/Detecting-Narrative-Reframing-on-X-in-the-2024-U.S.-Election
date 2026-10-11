@@ -18,15 +18,17 @@ START_DATE = pd.to_datetime("2024-05-01")
 month_list = ["aug_chunk","may_july",
              "november","october","september"]
 
-weekly_counts = []
+#weekly_counts = []
 
 def sampling():
     files = list(directory.glob("**/*.csv.gz"))
     output_dir = cur_directory.parent / "fixed"
     total_dir = cur_directory.parent / "weekly_orig_totals.csv"
-
     exemplar = pd.read_csv("F:/Milestone 2/exemplar_file.csv")
     target_cols = exemplar.columns
+    total_df = pd.read_csv(total_dir)
+    sampling_scheme = total_df['chunk_sample'].to_dict()
+
     for file in files:
         try:
             df = pd.read_csv(file,
@@ -51,10 +53,10 @@ def sampling():
             df = df[df['rawContent'] != ""]
             df['week'] = (df['date'] - START_DATE).dt.days // 7
             df = df[COLS]
-            weekly_counts.append(df.groupby('week').size())
-            strat = (df.groupby('week', group_keys=False).
-                     apply(func=lambda x:
-            x.sample(n=min(len(x), 15000), random_state=26)))
+            #weekly_counts.append(df.groupby('week').size())
+            strat = df.groupby('week', group_keys=False).apply(
+                lambda x:x.sample(frac=sampling_scheme[x.name], random_state=26)
+                           )
             strat['week'] = (strat['date'] - START_DATE).dt.days // 7
             output_file = process_df(strat)
             output_file = output_file.reindex(columns=target_cols)
@@ -63,11 +65,10 @@ def sampling():
             logger.info("Successfully processed %s", file)
         except IndexError:
             logger.exception("Error with file %s", file)
-    totals = (pd.concat(weekly_counts)
-              .groupby(level=0).sum()
-              .rename('weekly_orig_total'))
-    totals.to_csv(total_dir)
-    #return final_df
+    #totals = (pd.concat(weekly_counts)
+    #          .groupby(level=0).sum()
+    #          .rename('weekly_orig_total'))
+    #totals.to_csv(total_dir)
 def process_df(df):
     try:
         df['cleanedTweet'] = df['rawContent'].str.normalize('NFKD')
@@ -124,4 +125,5 @@ def make_parquet():
         logger.exception("Error with execution")
         raise
 if __name__ == '__main__':
-    make_parquet()
+    sampling()
+    #make_parquet()
