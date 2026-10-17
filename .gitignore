@@ -218,3 +218,4 @@ __marimo__/
 .streamlit/secrets.toml
 /x-24-us-election/
 /outdated_files/
+.DS_Store
