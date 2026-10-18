@@ -1,17 +1,20 @@
-import pandas as pd
 import textwrap
-import matplotlib.pyplot as plt
+from pathlib import Path
+
 import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
-#TODO Clean it up
+SCRIPT_DIR = Path(__file__).resolve().parent
 
-df = pd.read_csv('F:/Milestone 2/events_list.csv')
+
+df = pd.read_csv(SCRIPT_DIR.parent / 'DataFiles' / 'events_list.csv')
 
 df['Date'] = pd.to_datetime(df['Date'])
 
 # 2. Setup the figure
-fig, ax = plt.subplots(figsize=(30, 10), constrained_layout=True)
+fig, ax = plt.subplots(figsize=(35, 10), constrained_layout=True)
 
 ax.set_ylim(-2, 2)
 
