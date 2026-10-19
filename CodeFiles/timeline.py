@@ -13,7 +13,6 @@ df = pd.read_csv(SCRIPT_DIR.parent / 'DataFiles' / 'events_list.csv')
 
 df['Date'] = pd.to_datetime(df['Date'])
 
-# 2. Setup the figure
 fig, ax = plt.subplots(figsize=(35, 10), constrained_layout=True)
 
 ax.set_ylim(-2, 2)
@@ -23,7 +22,7 @@ ax.axhline(0, color="black", lw=2)
 ax.plot(df['Date'], [0] * len(df['Date']), "o", color="royalblue", markersize=10, zorder=3)
 
 # Alternating heights to prevent overlap
-levels = np.tile([1,-1,0.2,-0.2,1.8,-1.8], int(np.ceil(len(df['Date'])/3)))[:len(df['Date'])]
+levels = np.tile([0.8,-0.8,0.2,-0.2,1.2,-1.3], int(np.ceil(len(df['Date'])/3)))[:len(df['Date'])]
 
 for i, (date, event, level) in enumerate(zip(df['Date'], df['Event'], levels)):
     # Format the date to display inside the text block
@@ -33,7 +32,9 @@ for i, (date, event, level) in enumerate(zip(df['Date'], df['Event'], levels)):
     wrapped_event = "\n".join(textwrap.wrap(event, width=35))
 
     # Combine date and text (Date is bolded via matplotlib's math text styling)
-    full_text = f"$\mathbf{{{date_str}}}$\n{wrapped_event}"
+    #Create newline variable so it can be interpreted by the raw string
+    nl = "\n"
+    full_text = rf"$\mathbf{{{date_str}}}${nl}{wrapped_event}"
 
     # Draw vertical stem line from the timeline dot to the text box
     ax.vlines(date, 0, level, color="gray", linestyle="--", linewidth=1)
@@ -44,7 +45,7 @@ for i, (date, event, level) in enumerate(zip(df['Date'], df['Event'], levels)):
     ax.text(
         date, level, full_text,
         ha='center', va=va,
-        bbox=dict(boxstyle="round,pad=0.5", fc="whitesmoke", ec="royalblue", lw=1.5),
+        bbox={'boxstyle':"round,pad=0.5", 'fc':"whitesmoke", 'ec':"royalblue", 'lw':1.5},
         fontsize=9.5
     )
 
@@ -58,4 +59,5 @@ ax.get_yaxis().set_visible(False)
 for spine in ["left", "right", "top"]:
     ax.spines[spine].set_visible(False)
 
+plt.savefig("timeline.png")
 plt.show()
