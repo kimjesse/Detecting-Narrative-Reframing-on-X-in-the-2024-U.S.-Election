@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 """
 Step 1: Make the label packets.
 
@@ -11,7 +12,7 @@ the two lists and gives a label: the right answer the model learns from
 The labeler never sees the week number, dates, or any scores to prevent leakage.
 
 How to run (from the repo folder):
-    python supervised/make_label_packets.py
+    python supervised/1_make_packets.py
 
 Outputs (in supervised/labeling/):
     packets/row_001.md ...  one packet per issue-week
@@ -20,15 +21,6 @@ Outputs (in supervised/labeling/):
 
 Keep supervised/labeling/ out of git, because the packets contain tweet text.
 """
-
-
-# Stop if the packets were already built so they can't change by accident.
-# (To rebuild delete the labeling folder first.)
-if (OUT_FOLDER / "answer_key.csv").exists():
-    print("STOP: packets already exist. Delete supervised/labeling/ to rebuild.")
-    return
-
-
 
 import sys
 from pathlib import Path
@@ -45,7 +37,7 @@ OUT_FOLDER = Path(__file__).resolve().parent / "labeling"
 
 
 sys.path.append(str(REPO / "SandboxNotebooks"))
-from shift_scoring import (  # pylint disable=wrong-import-position
+from shift_scoring import (  # pylint: disable=wrong-import-position
     ISSUE_KEYWORDS, filter_issue_tweets, tag_issues,
 )
 
@@ -92,6 +84,12 @@ def write_packet(packet):
 
 def main():
     """Build one packet per issue-week and save them."""
+    # Stop if the packets were already built so they can't change by accident.
+    # (To rebuild, delete the labeling folder first.)
+    if (OUT_FOLDER / "answer_key.csv").exists():
+        print("STOP: packets already exist. Delete supervised/labeling/ to rebuild.")
+        return
+
     # 1. Load the tweets and tag each tweet's issues with the shared function
     df = pd.read_parquet(SAMPLE_FILE, columns=["cleanedTweet", "week"])
     df = tag_issues(df)

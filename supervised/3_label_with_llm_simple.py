@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 """
 SIMPLE-PROMPT TEST: label each packet with an LLM (Claude Sonnet 5.5)
 using the simple shift / no-shift prompt (no Narrative Policy Framework).
@@ -12,7 +13,7 @@ What this script does, step by step:
 
 How to run from repo:
   - Prompt test: put 5 row_ids in TEST_ROWS, then run
-        python supervised/3_label_with_llm.py
+        python supervised/3_label_with_llm_simple.py
     Answers go to llm_test_labels_simple.csv. Read the "reason" column.
   - Full run: make TEST_ROWS empty again ([]), then run the same command.
     Answers go to llm_labels_simple.csv.
@@ -33,8 +34,7 @@ from collections import Counter
 from pathlib import Path
 
 import pandas as pd
-from anthropic import Anthropic
-
+from anthropic import Anthropic  # pylint: disable=import-error
 
 # Settings
 
@@ -180,11 +180,11 @@ def main():
 
     client = Anthropic()
     total_cost = 0.0    # dollars spent so far in this run
-    
+
     for _, packet in packets.iterrows():
         if packet["row_id"] in done:
             continue
-        
+
         # Ask the LLM RUNS times about the same row
         answers = []
         try:
