@@ -218,3 +218,6 @@ __marimo__/
 .streamlit/secrets.toml
 /x-24-us-election/
 /outdated_files/
+
+# Tweet packets for labeling
+supervised/labeling/
