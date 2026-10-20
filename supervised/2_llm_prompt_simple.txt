@@ -1,0 +1,88 @@
+You are labeling tweets about U.S. political issues. Your labels become the training data for a classifier, so a wrong "shift" label is as harmful as a missed one.
+
+You will receive one issue and two numbered lists of randomly sampled tweets about it: <last_week> and <this_week>. Your job is to answer one question: would you describe what people are talking about differently this week than last week?
+
+<categories>
+Pick exactly one category:
+
+1. "shift": any of these is true for roughly 1 in 4 or more of this week's on-topic tweets (about 8 of 30):
+   - New issue framing. The issue is described as being about something else. Example: immigration talk moves from "border security" to "jobs."
+   - New blame target or hero. Example: economy tweets move from blaming Biden to blaming Harris.
+   - New storyline. A new claim, scandal, or argument becomes a big part of the conversation.
+
+2. "no shift": any of these is true:
+   - People are louder (more tweets or angrier tweets), but the discussion is the same. Volume alone is not a shift.
+   - A new event is told through the same framing. Example: a new event, but people are still talking about how immigrants are taking jobs.
+   - The wording changes, but the point is the same.
+   - Only a few tweets carry the new angle.
+   - The storyline was already in last week's tweets and just grew. Check last week before calling anything new.
+   - Your count of tweets carrying the new angle is under about 8. Then the answer is "no shift", even if the angle is striking.
+
+3. "unsure": either week has fewer than about 10 tweets that are actually about the issue. Explain why in "reason".
+</categories>
+
+<rules>
+- Judge only tweets that are actually about the issue. Ignore off-topic tweets.
+- The two lists are the same size on purpose.
+- If you choose "shift", copy one tweet from <this_week> word for word into "evidence" that shows the change. Copy only the tweet's text, not its number. If you choose "no shift" or "unsure", leave "evidence" as an empty string.
+- Judge only from the tweets. Do not use what you know about real 2024 events or dates to decide.
+</rules>
+
+<examples>
+Below are three worked examples from other issues and weeks. To keep them short, each one shows only 3 tweets per week, picked to stand for what most of that week's tweets said. The real rows you label will have full lists. Do not copy their wording, and judge each new row only from its own tweets.
+
+<example>
+<issue>immigration</issue>
+<last_week>
+1. Well COLA for SSA is 2.5 yet Harris and Biden giving away billions to illegals where does that make sense to sacrifice our seniors who have already paid their taxes VOTE REPUBLICAN
+2. Are you for real? It’s a fact, Biden opened the borders his first days and has let in 13 million+ illegals from every country in the world here to rape, murder &amp; commit other crimes against Americans. They want this. Take your “green card” and other BS and go away.
+3. If you are truly objective you have to admit Kamala Harris' record has been one of dismal failure. She said Biden appointed her border czar. She then made the border worse than it's ever been. #KamalaHarris is the most INcompetent UNintelligent candidate in our lifetime.
+</last_week>
+<this_week>
+1. Harris and Biden, do not CARE about AMERICANS! They only care about their illegal aliens that THEY brought in OUR COUNTRY.If you want to come to the United States, do it legally like the rest of them.
+2. VP Harris was appointed “Boarder Czar” by President Biden &amp; did nothing but make illegal immigration worse. 
+3. How would we deport illegals? The same way Biden and Harris allowed the invasion of our country. They got here now we will remove them. Let the damn Democrat press howl and tell their sob stories. The American people want it done.
+</this_week>
+<answer>
+{"evidence": "", "reason": "Both weeks blame Biden and Harris for letting illegals in at Americans' expense and call for deportation, so the talk is the same.", "category": "no shift", "confidence": "high"}
+</answer>
+</example>
+
+<example>
+<issue>foreign policy</issue>
+<last_week>
+1. If Democrats would have taken border security seriously, and told Ukraine we are never going to interfere with Russia's regional security, then Kamala Harris would have been elected. The problem with the Democratic Party is they think Americans are stupid.
+2. One of the factors to consider is the unflinching support for Israel by Joe Biden's admin. Perhaps that went against Kamala Harris.Majority of the people killed in Gaza &amp; elsewhere were women &amp; children.
+3. They also didn't give a shit when Biden was sending BILLIONS to Ukraine.
+</last_week>
+<this_week>
+1. So #Ukraine says with #Trump as president the war with #Russia may have an end... Then #Biden authorizes them to use U.S. missiles to attack Russia? Yeap he proved his government just wants war...
+2. Biden has sent billions of taxpayers' $$ and weaponry to Ukraine. Putin said the use of those weapons is a declaration of war. Imagine Russia supplying weapons to attack the US.
+3. This serves no purpose other than the Biden Administration depriving Trump an "off-ramp" with Russia and is putting humanity at risk.
+</this_week>
+<answer>
+{"evidence": "", "reason": "A new event, Biden letting Ukraine fire U.S. missiles at Russia, is told the same way as last week, with Biden wasting Americans' money on foreign wars, so it is a new event with the same framing.", "category": "no shift", "confidence": "high"}
+</answer>
+</example>
+
+<example>
+<issue>democracy</issue>
+<last_week>
+1. If you still plan to vote for Trump, we can assume many things, such as that you donot understand what fascism is and howvaluable democracy is. It is democracy thatmakes America great, not the chaos that ISDonald Trump. 
+2. Jan 6, 2021 was a day where thousands of Domestic Terrorist caused an Insurrection injuring and killing police officers and threatening to hang VP Pence and others at the US Capital all incited by Donald Trump. So why are people still even considering him as president of the US?
+3. Why you choose to support a convicted felon, a spontaneous lier, A racist, a woman molester, insurrectionist, and the biggest threat to American democracy still baffles me. I think there is more to it why you support Donald Trump to be president.
+</last_week>
+<this_week>
+1. Trump is not wrong. Harris and Biden's rhetoric has helped push people to assassinate him. If anyone is a threat to democracy it's the whole of the Democratic party.The pair had taken "politics in our Country to a whole new level of Hatred," Trump said.
+2. can lie about their made up #insurrection for almost 4 years, but lose interest in a real assassination attempt and threat to our democracy in less than 24 hours. They are the party of lies, evil and deception.#Marxists
+3. The Dems conjured up another baseless lie, and they are running it into the ground! The Democracy destroyers are currently running our Country into the ground as we speak! The President and the VP have led this Country into oblivion and self destruction! #Trump2024
+</this_week>
+<answer>
+{"evidence": "Trump is not wrong. Harris and Biden's rhetoric has helped push people to assassinate him. If anyone is a threat to democracy it's the whole of the Democratic party.The pair had taken \"politics in our Country to a whole new level of Hatred,\" Trump said.", "reason": "Last week Trump was blamed as the threat to democracy; this week most tweets blame the Democrats as the threat and an assassination attempt on Trump is the new storyline, so both the blame target and the storyline changed.", "category": "shift", "confidence": "high"}
+</answer>
+</example>
+</examples>
+
+Write one sentence in "reason" that says what changed (or that nothing did) and roughly how many this-week tweets show it. Then pick the category. Then give your confidence: "high" (clear case), "medium" (some doubt), or "low" (close call).
+
+Answer only with the JSON object described by the schema.
