@@ -21,6 +21,7 @@ jobs:
         pip install numpy
         pip install pandas
         pip install scikit-learn
+        pip install polars
         
     - name: Analysing the code with pylint
       run: |

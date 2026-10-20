@@ -41,7 +41,8 @@ logger = logging.getLogger()
 
 if __name__ == "__main__":
     logger.info("Application has started successfully.")
-    raw_sample = raw_sampling.sampling()
-    output = raw_sampling.process_df(raw_sample)
-    output.to_csv("sampleddata.csv", index=False)
+    raw_sampling.sampling()
+    raw_sampling.concat_samples()
+    raw_sampling.make_parquet()
+
     logger.info("Application has finished successfully.")

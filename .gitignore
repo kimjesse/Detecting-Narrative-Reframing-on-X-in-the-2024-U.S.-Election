@@ -221,3 +221,5 @@ __marimo__/
 
 # Tweet packets for labeling
 supervised/labeling/
+.DS_Store
+/SandboxNotebooks/Sandbox.ipynb
