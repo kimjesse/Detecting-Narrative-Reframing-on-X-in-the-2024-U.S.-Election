@@ -1,0 +1,16 @@
+# Core Libraries
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.17.0
+scikit-learn==1.8.0
+shap==0.54.1
+
+# Data Files and Visualization
+pyarrow==26.0.0
+polars==2.0.0
+matplotlib==3.10.8
+wordcloud
+
+# Labeling and Notebooks
+anthropic==0.100.0
+jupyter==1.1.1
