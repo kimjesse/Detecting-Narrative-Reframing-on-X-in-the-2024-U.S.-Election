@@ -1,11 +1,7 @@
-# pylint: disable=invalid-name
 """
 SIMPLE-PROMPT TEST: label each packet with an LLM (Claude Sonnet 5.5)
-using the simple shift / no-shift prompt (no Narrative Policy Framework).
-This is a copy of 3_label_with_llm.py. Only the prompt, the answer shape,
-the categories, and the output file names are different.
 
-What this script does, step by step:
+What this script does:
   1. Reads the prompt
   2. Reads the packets (last week's tweets vs. this week's tweets).
   3. Sends each packet to the LLM, one at a time, and gets back a label.
@@ -13,20 +9,16 @@ What this script does, step by step:
 
 How to run from repo:
   - Prompt test: put 5 row_ids in TEST_ROWS, then run
-        python supervised/3_label_with_llm_simple.py
+        python supervised/label_with_llm_simple.py
     Answers go to llm_test_labels_simple.csv. Read the "reason" column.
   - Full run: make TEST_ROWS empty again ([]), then run the same command.
     Answers go to llm_labels_simple.csv.
   - If the script stops run it again. It skips rows that already have a label.
 
 Majority vote (RUNS):
-  The LLM has some randomness, so the same row can get a different answer on
-  different runs. To even this out, each row is labeled RUNS times (3 by
-  default) and we keep the answer that comes up most often (a majority vote,
-  also called self-consistency). The "agreement" column shows how many runs
+  The LLM has some randomness. Each row is labeled runs 3 times and we keep 
+  the answer that comes up most often. The "agreement" column shows how many runs
   agreed, e.g. "3/3" (all agreed) or "2/3" (one run disagreed).
-  If no answer gets a majority, the row gets "no shift" (label 0), the same
-  default our hand-labeling rules use when labelers can't agree.
 """
 
 import json
@@ -40,7 +32,7 @@ from anthropic import Anthropic  # pylint: disable=import-error
 
 FOLDER = Path(__file__).resolve().parent
 LABEL_FOLDER = FOLDER.parent / "DataFiles" / "labeling"
-PROMPT_FILE = FOLDER / "2_llm_prompt_simple.txt"
+PROMPT_FILE = FOLDER / "llm_prompt_simple.txt"
 MODEL = "claude-sonnet-5-5"
 
 # Price in dollars per million tokens (a token is a word piece, about 3/4 of a word).

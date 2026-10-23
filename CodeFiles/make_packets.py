@@ -1,6 +1,5 @@
-# pylint: disable=invalid-name
 """
-Step 1: Make the label packets.
+Make the label packets.
 
 A packet is what a labeler reads to decide if an issue's story changed
 from one week to the next. One packet = one issue in one week (an
@@ -12,12 +11,12 @@ the two lists and gives a label: the right answer the model learns from
 The labeler never sees the week number, dates, or any scores to prevent leakage.
 
 How to run (from the repo folder):
-    python CodeFiles/1_make_packets.py
+    python CodeFiles/make_packets.py
 
 Outputs (in DataFiles/labeling/):
-    packets/row_001.md ...  one packet per issue-week
-    packets.jsonl           the same packets in a file llm_label.py can read
-    answer_key.csv          which row_id is which issue and week
+    packets/row_001.md ..one packet per issue-week
+    packets.jsonl        the same packets in a file label_with_llm_simple.py can read
+    answer_key.csv       which row_id is which issue and week
 """
 
 import sys
@@ -30,7 +29,7 @@ import pandas as pd
 # File locations
 
 REPO = Path(__file__).resolve().parent.parent
-SAMPLE_FILE = REPO / "sampleddata.parquet"
+SAMPLE_FILE = REPO / "DataFiles" / "sampleddata.parquet
 OUT_FOLDER = REPO / "DataFiles" / "labeling"
 
 
