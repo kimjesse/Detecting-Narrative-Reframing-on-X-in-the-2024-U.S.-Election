@@ -2,7 +2,7 @@ import logging
 import sys
 from logging.handlers import RotatingFileHandler
 import raw_sampling
-
+#This script runs the preprocessing scripts for cleaning and sampling the Twitter Data
 
 def setup_logging(log_file="milestone2.log", level=logging.INFO):
     """Configures the root logger for the entire application."""
@@ -40,6 +40,7 @@ logger = logging.getLogger()
 
 
 if __name__ == "__main__":
+    #Runs the preprocessing scripts and logs the actions
     logger.info("Application has started successfully.")
     raw_sampling.sampling()
     raw_sampling.concat_samples()

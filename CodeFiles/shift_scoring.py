@@ -2,7 +2,7 @@
 Shared issue tagging and shift scoring (from tk_unsupervised_learning.ipynb).
 Used by TK's and Shay's notebooks. TK edits keywords and scoring here directly.
 
-Source: copied from SandboxNotebooks/tk_unsupervised_learning.ipynb (Tanisha).
+Source: copied from Notebooks/tk_unsupervised_learning.ipynb (Tanisha).
 Functions from commit bb56842. ISSUE_KEYWORDS from her Oct 15 update, commit c2bb1ea. 
 Logic and settings are unchanged. The only edits:
   - Settings are pulled out as named constants so every notebook uses the same values.
