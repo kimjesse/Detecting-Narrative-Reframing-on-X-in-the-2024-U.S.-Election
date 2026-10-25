@@ -1,7 +1,10 @@
 import logging
 import sys
 from logging.handlers import RotatingFileHandler
+
 import raw_sampling
+
+
 #This script runs the preprocessing scripts for cleaning and sampling the Twitter Data
 
 def setup_logging(log_file="milestone2.log", level=logging.INFO):
