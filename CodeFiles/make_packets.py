@@ -29,7 +29,7 @@ import pandas as pd
 # File locations
 
 REPO = Path(__file__).resolve().parent.parent
-SAMPLE_FILE = REPO / "DataFiles" / "sampleddata.parquet
+SAMPLE_FILE = REPO / "DataFiles" / "sampleddata.parquet"
 OUT_FOLDER = REPO / "DataFiles" / "labeling"
 
 
