@@ -37,7 +37,7 @@ def sampling():
     files = list(directory.glob("**/*.csv.gz"))
     output_dir = cur_directory.parent / "fixed"
     output_dir.mkdir(parents=True, exist_ok=True)
-    total_dir = cur_directory.parent / "weekly_orig_totals.csv"
+    total_dir = cur_directory.parent / "DataFiles" / "weekly_orig_totals.csv"
     # This file contains the correct columns when run correctly that the
     # other files will use
     # for correct column alignment.
