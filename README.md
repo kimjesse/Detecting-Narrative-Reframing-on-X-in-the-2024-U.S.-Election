@@ -22,7 +22,7 @@ cd Detecting-Narrative-Reframing-on-X-in-the-2024-U.S.-Election
 pip install -r requirements.txt
 
 # Clone the X data repository
-git clone https://github.com/sinking8/x-24-us-election.git .
+git submodule add https://github.com/sinking8/x-24-us-election.git x-24-us-election
 ```
 
 ## Usage
