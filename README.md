@@ -46,6 +46,9 @@ which is the representative sample used in other parts.
 The intermediate output files have not been included as a part of this repo 
 to avoid unnecessarily adding to the repo size.
 
+[first_100_lines_of_sampleddata.csv](first_100_lines_of_sampleddata.csv) is 
+included in this repo which contains the top 100 lines of sampleddata.parquet.
+
 ### Unsupervised Learning
 
 The unsupervised learning portion of the project is all contained within
