@@ -127,12 +127,12 @@ the [Notebooks Folder](/Notebooks).
 1. [noise_floor.ipyb](Notebooks/noise_floor.ipynb)
    and [volume_summary.ipynb](Notebooks/volume_summary.ipynb) (either
    order)
-   1. noise_floor.ipynb estimates the noise floor for each issue-week.\
+   - noise_floor.ipynb estimates the noise floor for each issue-week.\
    Reads: [sampleddata.parquet](DataFiles/sampleddata.parquet), [answer_key.
       csv](/DataFiles/answer_key.csv), [tk_issue_week_features.csv](/DataFiles/tk_issue_week_features.csv)\
    Writes: [noise_floor.csv](DataFiles/noise_floor.csv)
 
-   1. volume_summary.ipynb adds weekly tweet volume for each issue.\
+   - volume_summary.ipynb adds weekly tweet volume for each issue.\
    Reads: [tk_issue_week_features.csv](DataFiles/tk_issue_week_features.csv)
       , [weekly_orig_totals.csv](/DataFiles/weekly_orig_totals.csv)\
    Writes: [volume_summary](DataFiles/volume_summary.csv)
