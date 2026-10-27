@@ -1,0 +1,126 @@
+fold,model,model__C,inner_pr_auc,learning_rate,max_depth,min_samples_leaf,model__gamma
+1,Logistic Regression,0.01,0.6,,,,
+1,Logistic Regression,0.1,0.6,,,,
+1,Logistic Regression,1.0,0.6,,,,
+1,Logistic Regression,10.0,0.6,,,,
+1,Gradient-Boosted Trees,,0.4125,0.05,2.0,3.0,
+1,Gradient-Boosted Trees,,0.475,0.05,2.0,5.0,
+1,Gradient-Boosted Trees,,0.325,0.05,2.0,10.0,
+1,Gradient-Boosted Trees,,0.4125,0.05,3.0,3.0,
+1,Gradient-Boosted Trees,,0.475,0.05,3.0,5.0,
+1,Gradient-Boosted Trees,,0.325,0.05,3.0,10.0,
+1,Gradient-Boosted Trees,,0.4125,0.1,2.0,3.0,
+1,Gradient-Boosted Trees,,0.475,0.1,2.0,5.0,
+1,Gradient-Boosted Trees,,0.325,0.1,2.0,10.0,
+1,Gradient-Boosted Trees,,0.4125,0.1,3.0,3.0,
+1,Gradient-Boosted Trees,,0.475,0.1,3.0,5.0,
+1,Gradient-Boosted Trees,,0.325,0.1,3.0,10.0,
+1,SVM (RBF kernel),0.1,0.6,,,,scale
+1,SVM (RBF kernel),0.1,0.6,,,,0.01
+1,SVM (RBF kernel),0.1,0.5166666666666666,,,,0.1
+1,SVM (RBF kernel),1.0,0.6,,,,scale
+1,SVM (RBF kernel),1.0,0.6,,,,0.01
+1,SVM (RBF kernel),1.0,0.5166666666666666,,,,0.1
+1,SVM (RBF kernel),10.0,0.5166666666666666,,,,scale
+1,SVM (RBF kernel),10.0,0.6,,,,0.01
+1,SVM (RBF kernel),10.0,0.5166666666666666,,,,0.1
+2,Logistic Regression,0.01,0.6513888888888889,,,,
+2,Logistic Regression,0.1,0.7347222222222222,,,,
+2,Logistic Regression,1.0,0.7458333333333332,,,,
+2,Logistic Regression,10.0,0.7833333333333332,,,,
+2,Gradient-Boosted Trees,,0.4533068783068783,0.05,2.0,3.0,
+2,Gradient-Boosted Trees,,0.43124999999999997,0.05,2.0,5.0,
+2,Gradient-Boosted Trees,,0.48148148148148145,0.05,2.0,10.0,
+2,Gradient-Boosted Trees,,0.5693783068783068,0.05,3.0,3.0,
+2,Gradient-Boosted Trees,,0.45,0.05,3.0,5.0,
+2,Gradient-Boosted Trees,,0.48148148148148145,0.05,3.0,10.0,
+2,Gradient-Boosted Trees,,0.44867724867724873,0.1,2.0,3.0,
+2,Gradient-Boosted Trees,,0.44236111111111115,0.1,2.0,5.0,
+2,Gradient-Boosted Trees,,0.4677910052910053,0.1,2.0,10.0,
+2,Gradient-Boosted Trees,,0.5587962962962963,0.1,3.0,3.0,
+2,Gradient-Boosted Trees,,0.44236111111111115,0.1,3.0,5.0,
+2,Gradient-Boosted Trees,,0.4677910052910053,0.1,3.0,10.0,
+2,SVM (RBF kernel),0.1,0.4074074074074074,,,,scale
+2,SVM (RBF kernel),0.1,0.6027777777777777,,,,0.01
+2,SVM (RBF kernel),0.1,0.36071428571428577,,,,0.1
+2,SVM (RBF kernel),1.0,0.48280423280423274,,,,scale
+2,SVM (RBF kernel),1.0,0.6027777777777777,,,,0.01
+2,SVM (RBF kernel),1.0,0.4481481481481482,,,,0.1
+2,SVM (RBF kernel),10.0,0.482010582010582,,,,scale
+2,SVM (RBF kernel),10.0,0.6405092592592593,,,,0.01
+2,SVM (RBF kernel),10.0,0.5898148148148148,,,,0.1
+3,Logistic Regression,0.01,0.35019841269841273,,,,
+3,Logistic Regression,0.1,0.3471681096681096,,,,
+3,Logistic Regression,1.0,0.35468574635241296,,,,
+3,Logistic Regression,10.0,0.35555555555555557,,,,
+3,Gradient-Boosted Trees,,0.32456709956709956,0.05,2.0,3.0,
+3,Gradient-Boosted Trees,,0.32447089947089947,0.05,2.0,5.0,
+3,Gradient-Boosted Trees,,0.31000881834215166,0.05,2.0,10.0,
+3,Gradient-Boosted Trees,,0.35465337132003794,0.05,3.0,3.0,
+3,Gradient-Boosted Trees,,0.33144910644910647,0.05,3.0,5.0,
+3,Gradient-Boosted Trees,,0.29889770723104053,0.05,3.0,10.0,
+3,Gradient-Boosted Trees,,0.35092900926234255,0.1,2.0,3.0,
+3,Gradient-Boosted Trees,,0.3379019129019129,0.1,2.0,5.0,
+3,Gradient-Boosted Trees,,0.3266754850088183,0.1,2.0,10.0,
+3,Gradient-Boosted Trees,,0.375352733686067,0.1,3.0,3.0,
+3,Gradient-Boosted Trees,,0.38216999050332384,0.1,3.0,5.0,
+3,Gradient-Boosted Trees,,0.2909611992945326,0.1,3.0,10.0,
+3,SVM (RBF kernel),0.1,0.22104654604654606,,,,scale
+3,SVM (RBF kernel),0.1,0.32012786596119924,,,,0.01
+3,SVM (RBF kernel),0.1,0.22644500561167233,,,,0.1
+3,SVM (RBF kernel),1.0,0.2404882154882155,,,,scale
+3,SVM (RBF kernel),1.0,0.2974223307556641,,,,0.01
+3,SVM (RBF kernel),1.0,0.25895061728395063,,,,0.1
+3,SVM (RBF kernel),10.0,0.25392416225749553,,,,scale
+3,SVM (RBF kernel),10.0,0.3027417027417027,,,,0.01
+3,SVM (RBF kernel),10.0,0.2700497033830367,,,,0.1
+4,Logistic Regression,0.01,0.3419188835855502,,,,
+4,Logistic Regression,0.1,0.3432160088506837,,,,
+4,Logistic Regression,1.0,0.310566748066748,,,,
+4,Logistic Regression,10.0,0.3131473102061338,,,,
+4,Gradient-Boosted Trees,,0.2602191911402438,0.05,2.0,3.0,
+4,Gradient-Boosted Trees,,0.3048027544351074,0.05,2.0,5.0,
+4,Gradient-Boosted Trees,,0.4131428107305301,0.05,2.0,10.0,
+4,Gradient-Boosted Trees,,0.2844112333792416,0.05,3.0,3.0,
+4,Gradient-Boosted Trees,,0.19191761588562414,0.05,3.0,5.0,
+4,Gradient-Boosted Trees,,0.32795762554534486,0.05,3.0,10.0,
+4,Gradient-Boosted Trees,,0.3590439774650301,0.1,2.0,3.0,
+4,Gradient-Boosted Trees,,0.1991830065359477,0.1,2.0,5.0,
+4,Gradient-Boosted Trees,,0.41424769712953413,0.1,2.0,10.0,
+4,Gradient-Boosted Trees,,0.2561191550871633,0.1,3.0,3.0,
+4,Gradient-Boosted Trees,,0.20419154193663994,0.1,3.0,5.0,
+4,Gradient-Boosted Trees,,0.3677977146501399,0.1,3.0,10.0,
+4,SVM (RBF kernel),0.1,0.258571196509793,,,,scale
+4,SVM (RBF kernel),0.1,0.2966727716727717,,,,0.01
+4,SVM (RBF kernel),0.1,0.2614863369249334,,,,0.1
+4,SVM (RBF kernel),1.0,0.32275037961312475,,,,scale
+4,SVM (RBF kernel),1.0,0.2715929132595799,,,,0.01
+4,SVM (RBF kernel),1.0,0.327729044834308,,,,0.1
+4,SVM (RBF kernel),10.0,0.3384259259259259,,,,scale
+4,SVM (RBF kernel),10.0,0.3011260344593678,,,,0.01
+4,SVM (RBF kernel),10.0,0.3486201888162672,,,,0.1
+5,Logistic Regression,0.01,0.336370545143837,,,,
+5,Logistic Regression,0.1,0.3302828210436906,,,,
+5,Logistic Regression,1.0,0.3390117904869458,,,,
+5,Logistic Regression,10.0,0.3527455001139212,,,,
+5,Gradient-Boosted Trees,,0.38430896866987085,0.05,2.0,3.0,
+5,Gradient-Boosted Trees,,0.386331990990376,0.05,2.0,5.0,
+5,Gradient-Boosted Trees,,0.28982472215939514,0.05,2.0,10.0,
+5,Gradient-Boosted Trees,,0.3525300257598394,0.05,3.0,3.0,
+5,Gradient-Boosted Trees,,0.3647698597698597,0.05,3.0,5.0,
+5,Gradient-Boosted Trees,,0.25956906164057675,0.05,3.0,10.0,
+5,Gradient-Boosted Trees,,0.40335455549741267,0.1,2.0,3.0,
+5,Gradient-Boosted Trees,,0.46496887708692797,0.1,2.0,5.0,
+5,Gradient-Boosted Trees,,0.26953538991354115,0.1,2.0,10.0,
+5,Gradient-Boosted Trees,,0.28347240154257697,0.1,3.0,3.0,
+5,Gradient-Boosted Trees,,0.4212108915868314,0.1,3.0,5.0,
+5,Gradient-Boosted Trees,,0.25130547168362294,0.1,3.0,10.0,
+5,SVM (RBF kernel),0.1,0.1923010344758449,,,,scale
+5,SVM (RBF kernel),0.1,0.21319120499792768,,,,0.01
+5,SVM (RBF kernel),0.1,0.1941771363597989,,,,0.1
+5,SVM (RBF kernel),1.0,0.22477513227513227,,,,scale
+5,SVM (RBF kernel),1.0,0.19752034542407212,,,,0.01
+5,SVM (RBF kernel),1.0,0.21988025409594036,,,,0.1
+5,SVM (RBF kernel),10.0,0.21339316094218053,,,,scale
+5,SVM (RBF kernel),10.0,0.23900392979340349,,,,0.01
+5,SVM (RBF kernel),10.0,0.24111482199717496,,,,0.1
